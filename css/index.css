@@ -6,12 +6,12 @@ html, body {
 
 .container{
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 5vh 80vh 15vh;
     grid-template-areas:
-            "h h h"
-            "m m m"
-            "f f f";
+            "h"
+            "m"
+            "f";
 }
 
 header {
