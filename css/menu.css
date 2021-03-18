@@ -1,0 +1,32 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 4vh 96vh;
+    grid-template-areas:
+            "h h"
+            "a m";
+
+}
+
+header {
+    grid-area: h;
+    background: red;
+}
+
+aside {
+    grid-area: a;
+    background: green;
+}
+
+main {
+    grid-area: m;
+    background: blue;
+}
+
+
