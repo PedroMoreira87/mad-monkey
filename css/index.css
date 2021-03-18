@@ -7,7 +7,7 @@ html, body {
 .container{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 5vh 80vh 15vh;
+    grid-template-rows: 4vh 81vh 15vh;
     grid-template-areas:
             "h"
             "m"
@@ -23,8 +23,8 @@ header {
     display: flex;
     color: #8197A4;
     justify-content: left;
-    transform: translate(0,-10%);
     margin-left: 0.5%;
+    font-size: 15px;
 }
 
 main {
