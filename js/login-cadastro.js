@@ -6,14 +6,14 @@ $(document).ready(function (){
     $(".pagina-cadastro").css("display", "none")
     $(".cadastrologin-link-image-button").click(mudarPagina)
     $("#submit-button").click(hashSenha)
-
+    $("#submit-button").click(fEnviarEmail);
 
 })
 
 function mudarPagina(){
 
 
-    if(pagina == 0){
+    if(pagina === 0){
 
         $(".pagina-login").css("animation", "descer 400ms ease-in-out")
         setTimeout(function(){
@@ -29,7 +29,7 @@ function mudarPagina(){
 
     }
 
-    if(pagina == 1){
+    if(pagina === 1){
 
         $(".pagina-cadastro").css("animation", "descer 400ms ease-in-out")
         setTimeout(function(){
@@ -55,4 +55,16 @@ function hashSenha(){
     alert(senha_hash_sha256)
 
 
+}
+
+function fEnviarEmail(){
+    $.ajax({
+        type: "POST",
+        dataType: "json",
+        url: "../php/login-cadastro.php",
+        data: {
+            email: $("#email").val(),
+        },
+        sucess: function(retorno){}
+    })
 }
