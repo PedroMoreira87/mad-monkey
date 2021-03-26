@@ -5,6 +5,7 @@ $(document).ready(function (){
 
     $(".pagina-cadastro").css("display", "none")
     $(".cadastrologin-link-image-button").click(mudarPagina)
+    $("#submit-button").click(hashSenha)
 
 
 })
@@ -43,6 +44,15 @@ function mudarPagina(){
         return
 
     }
-    
+
+}
+
+function hashSenha(){
+
+    var senha =  $("#password").val()
+    var myBitArray = sjcl.hash.sha256.hash(senha);
+    var senha_hash_sha256 = sjcl.codec.hex.fromBits(myBitArray);
+    alert(senha_hash_sha256)
+
 
 }
