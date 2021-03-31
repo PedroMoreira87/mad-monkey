@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+.div-logo{
+
+    width: 100%;
+    height: 100px;
+    border-bottom: 1px solid black;
+
+}
+
+.content-principal{
+
+    width: 100%;
+    height: 100%;
+
+}
+
+.content-centralizer{
+
+    height: 100%;
+    margin: auto;
+
+}
+
+.content{
+
+    width: 100%;
+    margin-top: 10px;
+
+}
+
+.planos{
+
+    width: 100%;
+
+}
+
+.planos td{
+
+    padding: 20px;
+    text-align: center;
+
+}
+
+.plano-quadro{
+
+    background-color: red;
+    width: 120px;
+    height: 120px;
+    margin: auto;
+
+}
+
+.planos tr td:first-child{
+
+    width: 40%;
+    text-align: left;
+
+}
+
+.planos tr:not(.primeiro, .ultimo) td{
+
+    border-bottom: 1px solid black;
+
+}
+
+.botao{
+
+    display: block;
+    border: none;
+    background-color: red;
+    color: white;
+    border-radius: 3px;
+    padding: 15px;
+    width: 45%;
+    margin: 15px auto;
+
+}
+
+.content-centralizer1{
+
+    width: 65%;
+
+}
+
+.content-centralizer2{
+
+    width: 30%;
+
+}
+
+.bandeiras p{
+
+    display: inline-block;
+
+}
+
+input[type="text"]{
+
+    display: block;
+    width: 100%;
+    padding: 20px 4px 20px 4px;
+    margin-bottom: 20px;
+    border-radius: 2px;
+    border: 1px solid gray;
+
+}
+
+.opcoes-cartao{
+
+    margin-bottom: 20px;
+
+}
+
+.ver-plano{
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: rgb(196, 196, 196);
+    margin-bottom: 20px;
+
+}
+
+.text{
+
+    margin-bottom: 50px;
+
+}
+
+#botao-assinatura{
+
+    width: 100%;
+
+
+}
+
+
+

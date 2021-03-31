@@ -5,8 +5,7 @@ $(document).ready(function (){
 
     $(".pagina-cadastro").css("display", "none")
     $(".cadastrologin-link-image-button").click(mudarPagina)
-    $("#submit-button").click(hashSenha)
-    $("#submit-button").click(fEnviarEmail);
+    $("#botao-cadastrar").click(fEnviarEmail);
 
 })
 
@@ -21,8 +20,6 @@ function mudarPagina(){
             $(".pagina-cadastro").css("display", "block")
             $(".pagina-cadastro").css("animation", "subir 400ms ease-in-out")
         }, 300)
-
-
      
         pagina = 1
         return
@@ -38,8 +35,6 @@ function mudarPagina(){
             $(".pagina-login").css("animation", "subir 400ms ease-in-out")     
         }, 300)
 
-
-
         pagina = 0
         return
 
@@ -52,8 +47,7 @@ function hashSenha(){
     var senha =  $("#password").val()
     var myBitArray = sjcl.hash.sha256.hash(senha);
     var senha_hash_sha256 = sjcl.codec.hex.fromBits(myBitArray);
-    alert(senha_hash_sha256)
-
+    return senha_hash_sha256
 
 }
 
@@ -61,10 +55,10 @@ function fEnviarEmail(){
     $.ajax({
         type: "POST",
         dataType: "json",
-        url: "../php/login-cadastro.php",
+        url: "../php/usuarioProvisorio.php",
         data: {
             email: $("#email").val(),
-        },
-        sucess: function(retorno){}
+            password: hashSenha()
+        }
     })
 }
