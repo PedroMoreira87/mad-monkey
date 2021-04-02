@@ -17,7 +17,7 @@
 
     </div>
 
-    <!-- <div class="content-principal content-principal1">
+    <div class="content-principal content-principal1">
         <div class="content-centralizer content-centralizer1">
             <div class="content content-1">
 
@@ -34,13 +34,13 @@
                     <tr class="primeiro">
                         <td></td>
                         <td class="plano">
-                            <div class="plano-quadro" id="plano"></div>
+                            <div class="plano-quadro"></div>
                         </td>
                         <td class="plano">
-                            <div class="plano-quadro" id="plano"></div>
+                            <div class="plano-quadro"></div>
                         </td>
                         <td class="plano">
-                            <div class="plano-quadro" id="plano"></div>
+                            <div class="plano-quadro"></div>
                         </td>
                     </tr>
                     <tr>
@@ -82,12 +82,12 @@
                     Only people who live with you may use your account. Watch on 4 different devices at the same time with Premium,
                     2 with Standard and 1 with Basic.
                 </p>
-                <button id="botao botao-continuar-plano">Continuar</button>
+                <button class="botao" id="botao-continuar-plano">Continuar</button>
             </div>
         </div>
-    </div> -->
+    </div> 
 
-    <div class="content-principal content-principal1">
+    <div class="content-principal content-principal2">
 
         <div class="content-centralizer content-centralizer2">
 
@@ -100,13 +100,23 @@
                 <p>elo</p>
                 <p>hype</p>
             </div>
+            <label>Select CPF or CNPJ:</label>
+            <div class="opcoes">
+                <input id="opcao-cpf" type="radio" name="opcao" value="opcao-cpf" checked="checked">
+                <label for="opcao-cpf">CPF</label>
+                <input id="opcao-cnpj" type="radio" name="opcao" value="opcao-cnpj">
+                <label for="opcao-cnpj">CNPJ</label>
+            </div>
+            <input type="text" placeholder="CPF" id="cpf">
+            <input type="text" placeholder="CNPJ" id="cnpj">
+            <input type="text" placeholder="Data de nascimento" id="datanascimento">
             <input type="text" placeholder="Nome completo" id="nome">
             <input type="text" placeholder="Número do cartão" id="numerocartao">
             <input type="text" placeholder="Data de expiração (MM/YY)" id="datacartao">
             <input type="text" placeholder="Código de segurança (CVV)" id="codigocartao">
             <label>Select your preferred way to process payment:</label>
-            <div class="opcoes-cartao">
-                <input id="cartao-credito" type="radio" name="tipo-cartao" value="credito" checked="true">
+            <div class="opcoes">
+                <input id="cartao-credito" type="radio" name="tipo-cartao" value="credito" checked="checked">
                 <label for="cartao-credito">Crédito</label>
                 <input id="cartao-debito" type="radio" name="tipo-cartao" value="debito">
                 <label for="cartao-debito">Débito</label>

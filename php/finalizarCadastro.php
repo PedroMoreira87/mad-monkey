@@ -1,83 +1,28 @@
-<?php
+<?php 
 
     include('conexao.php');
+    include('tratarErrosFinalizacao.php');
+    echo("oi");
 
-    
-    $nome = validacaoNome($_POST["nome"]);
-    $numeroCartao = validacaoNumero($_POST["numerocartao"], 19);
-    $codigoCartao = validacaoNumero($_POST["codigocartao"], 4;
-    $tipoCartao = validacaoTipoCartao($_POST["tipocartao"]);
+    session_start();
+ 
+    $email = $_SESSION['email'];
+    $password = $_SESSION['password'];
 
-    function validacaoDataCartao($data){
+    $query = "UPDATE usuarios SET 
+    born_date = '$dataNascimento',
+    cpf = '$cpf',
+    cnpj = '$cnpj',
+    nome_titular = '$nome',
+    card_number = '$numeroCartao',
+    expiration_date = '$dataCartao', 
+    security_code = '$codigoCartao', 
+    tipo_cartao = '$tipoCartao' 
+    WHERE email = '$email' AND password = '$password'";
+    mysqli_query($conexao, $query);
+    mysqli_close($conexao);
 
-        if(!str_contains($data, '/')){
-            die("data inválida");
-        }
-        else{
-            $split = explode("/", $data);
-        }
+    //header('Location: experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/pages/menu.html');
+    //exit();
 
-        if(sizeof($split) > 2){
-            die("data inválida");
-        }
-        else{
-            $mes = (int)$split[0];
-            $ano = (int)$split[1];
-        }
-
-        if(!is_numeric($mes) || !is_numeric($ano)){
-            die("data inválida");
-        }
-
-        if((int)$mes < 1 || (int)$mes > 12){
-            die("data inválida");
-        }
-
-        if((int)$ano < 2020 || (int)$ano > 2046){
-            die("data inválida");
-        }
-
-        return $data;
-
-    }
-
-    function validacaoNumero($numero, $comprimento){
-
-        //Valida tanto o código de segurança, quanto o número do cartão
-
-        if(!is_numeric($numero)){
-            die("numero invalido");
-        }
-
-        if(strlen($numero) != $comprimento){
-            die("numero invalido");
-        }
-
-        return $numero;
-
-    }
-
-    function validacaoNome($nome){
-
-        $charsValidos = 'abcdefghijklmnopqrstuvwxyz ';
-
-        for($i = 0; $i < strlen($nome); $i++){
-            if(!str_contains($charsValidos, strtolower($nome[$i])){
-                die("nome invalido");
-            }
-        }
-
-        return $nome;
-
-    }
-
-    function validacaoTipoCartao($tipoCartao){
-
-        if($tipoCartao != "credito" || $tipoCartao != "debito"){
-            die("nome invalido");
-        }
-
-        return $tipoCartao;
-
-    }
 ?>

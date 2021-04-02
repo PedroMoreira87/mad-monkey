@@ -2,11 +2,17 @@
 
     include('conexao.php');
 
+    $name = $_POST['name'];
     $email = $_POST['email'];
     $password = $_POST['password'];
     $token = gerarToken();
 
-    colocarNoBanco($conexao, $email, $password, $token);
+    session_start();
+    $_SESSION['name'] = $name;
+    $_SESSION['email'] = $email;
+    $_SESSION['password'] = $password;
+    
+    colocarNoBanco($conexao, $name, $email, $password, $token);
     enviarEmailConfirmacao($email, $token);
 
     function gerarToken(){
@@ -24,10 +30,10 @@
         return $token;
     }
 
-    function colocarNoBanco($conexao, $email, $password, $token){
-        $query = "INSERT INTO usuariosprovisorios VALUES (NULL, '$email', '$password', '$token')";
+    function colocarNoBanco($conexao, $name, $email, $password, $token){
+        $query = "INSERT INTO usuariosprovisorios VALUES (NULL, '$name', '$email', '$password', '$token')";
         mysqli_query($conexao, $query);
-        mysqli_close();
+        mysqli_close($conexao);
     
     }
 
@@ -46,9 +52,9 @@
         $mailer->SMTPSecure = "ssl";
         $mailer->Host = "smtp.gmail.com";
         $mailer->Port = 465;
-        $mailer->Username = "brunobergamini12345@gmail.com";
-        $mailer->Password = "gmail192168251367";
-        $mailer->setFrom("brunobergamini12345@gmail.com");
+        $mailer->Username = "madmonkey1236@gmail.com";
+        $mailer->Password = "mad!!123456";
+        $mailer->setFrom("madmonkey1236@gmail.com");
         $mailer->addAddress($email);
         $mailer->Subject = "Confirmação de cadastro";
         $mailer->Body    = "<a href='$linkConfirmacao'>Clique aqui para confirmar seu cadastro</a>";

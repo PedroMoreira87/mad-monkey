@@ -33,6 +33,12 @@
 
 }
 
+.content-principal2{
+
+    display: none;
+
+}
+
 .planos{
 
     width: 100%;
@@ -93,11 +99,24 @@
 
 }
 
+.bandeiras{
+
+    margin-bottom: 20px;
+
+}
+
 .bandeiras p{
 
     display: inline-block;
 
 }
+
+#cnpj{
+
+    display: none;
+
+}
+
 
 input[type="text"]{
 
@@ -110,7 +129,7 @@ input[type="text"]{
 
 }
 
-.opcoes-cartao{
+.opcoes{
 
     margin-bottom: 20px;
 

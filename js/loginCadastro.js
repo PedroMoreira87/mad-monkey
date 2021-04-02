@@ -57,6 +57,7 @@ function fEnviarEmail(){
         dataType: "json",
         url: "../php/usuarioProvisorio.php",
         data: {
+            name: $("#name").val(),
             email: $("#email").val(),
             password: hashSenha()
         }
