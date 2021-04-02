@@ -1,24 +1,24 @@
 <?php 
 
     include('conexao.php');
-    include('tratarErrosFinalizacao.php');
-    echo("oi");
 
-    session_start();
- 
+    $nome = 'mamaco2';
+    $numeroCartao = 'asd';
+    $dataCartao = 'asd';
+    $codigoCartao = 'asd';
+    $tipoCartao = 'credito';
+
     $email = $_SESSION['email'];
     $password = $_SESSION['password'];
 
-    $query = "UPDATE usuarios SET 
-    born_date = '$dataNascimento',
-    cpf = '$cpf',
-    cnpj = '$cnpj',
+    $query = "UPDATE usuarios SET
     nome_titular = '$nome',
     card_number = '$numeroCartao',
-    expiration_date = '$dataCartao', 
-    security_code = '$codigoCartao', 
+    expiration_date = '$dataCartao',
+    security_code = '$codigoCartao',
     tipo_cartao = '$tipoCartao' 
     WHERE email = '$email' AND password = '$password'";
+
     mysqli_query($conexao, $query);
     mysqli_close($conexao);
 

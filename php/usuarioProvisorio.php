@@ -8,7 +8,6 @@
     $token = gerarToken();
 
     session_start();
-    $_SESSION['name'] = $name;
     $_SESSION['email'] = $email;
     $_SESSION['password'] = $password;
     
@@ -41,7 +40,7 @@
 
         include("PHPMailer/PHPMailerAutoload.php");
 
-        $linkConfirmacao = "192.168.0.14/experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/php/confirmacaoCadastro.php/"
+        $linkConfirmacao = "192.168.0.4/experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/php/confirmacaoCadastro.php/"
         .$token;
     
         $mailer = new PHPMailer;

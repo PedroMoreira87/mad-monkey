@@ -1,73 +1,69 @@
 <?php
 
-$nome = validacaoNome($_POST["nome"]);
-$numeroCartao = validacaoNumero($_POST["numerocartao"], 19);
-$dataCartao = validacaoDataCartao($_POST["datacartao"]);
-$codigoCartao = validacaoNumero($_POST["codigocartao"], 4);
-$tipoCartao = validacaoTipoCartao($_POST["tipocartao"]);
 
-function validacaoDataCartao($data){
 
-    if(strpos($data, '/') == false){
-        exit();
-    }
-    else{
-        $split = explode("/", $data);
+    function validacaoNome($nome){
+
+        return $nome;
+
     }
 
-    if(sizeof($split) > 2){
-        exit();
-    }
-    else{
-        $mes = $split[0];
-        $ano = $split[1];
-    }
+    function validacaoNumero($numero, $comprimento){
 
-    if(!is_numeric($mes) || !is_numeric($ano)){
-        exit();
-    }
+        //Valida tanto o código de segurança, quanto o número do cartão
 
-    if((int)$mes < 1 || (int)$mes > 12){
-        exit();
-    }
+        if(!is_numeric($numero)){
+            exit();
+        }
 
-    if((int)$ano < 21 || (int)$ano > 46){
-        exit();
+        if(strlen($numero) != $comprimento){
+            exit();
+        }
+
+        return $numero;
+
     }
 
-    return $data;
+    function validacaoDataCartao($data){
 
-}
+        if(strpos($data, '/') == false){
+            exit();
+        }
+        else{
+            $split = explode("/", $data);
+        }
 
-function validacaoNumero($numero, $comprimento){
+        if(sizeof($split) > 2){
+            exit();
+        }
+        else{
+            $mes = $split[0];
+            $ano = $split[1];
+        }
 
-    //Valida tanto o código de segurança, quanto o número do cartão
+        if(!is_numeric($mes) || !is_numeric($ano)){
+            exit();
+        }
 
-    if(!is_numeric($numero)){
-        exit();
+        if((int)$mes < 1 || (int)$mes > 12){
+            exit();
+        }
+
+        if((int)$ano < 21 || (int)$ano > 46){
+            exit();
+        }
+
+        return $data;
+
     }
 
-    if(strlen($numero) != $comprimento){
-        exit();
+    function validacaoTipoCartao($tipoCartao){
+
+        if($tipoCartao != "credito" && $tipoCartao != "debito"){
+            exit();
+        }
+
+        return $tipoCartao;
+
     }
 
-    return $numero;
-
-}
-
-function validacaoNome($nome){
-
-    return $nome;
-
-}
-
-function validacaoTipoCartao($tipoCartao){
-
-    if($tipoCartao != "credito" && $tipoCartao != "debito"){
-        exit();
-    }
-
-    return $tipoCartao;
-
-}
-?>
