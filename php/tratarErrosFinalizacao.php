@@ -1,6 +1,28 @@
 <?php
 
+    function validacaoPlano($plano){
 
+        return $plano;
+
+    }
+
+    function validacaoCPF($cpf){
+
+        return $cpf;
+
+    }
+
+    function validacaoCNPJ($cnpj){
+
+        return $cnpj;
+
+    }
+
+    function validacaoDataNascimento($dataNascimento){
+
+        return $dataNascimento;
+
+    }
 
     function validacaoNome($nome){
 
@@ -13,11 +35,12 @@
         //Valida tanto o código de segurança, quanto o número do cartão
 
         if(!is_numeric($numero)){
-            exit();
+            
+        
         }
 
         if(strlen($numero) != $comprimento){
-            exit();
+            erro();
         }
 
         return $numero;
@@ -27,14 +50,14 @@
     function validacaoDataCartao($data){
 
         if(strpos($data, '/') == false){
-            exit();
+            erro();
         }
         else{
             $split = explode("/", $data);
         }
 
         if(sizeof($split) > 2){
-            exit();
+            erro();
         }
         else{
             $mes = $split[0];
@@ -42,15 +65,15 @@
         }
 
         if(!is_numeric($mes) || !is_numeric($ano)){
-            exit();
+            erro();
         }
 
         if((int)$mes < 1 || (int)$mes > 12){
-            exit();
+            erro();
         }
 
         if((int)$ano < 21 || (int)$ano > 46){
-            exit();
+            erro();
         }
 
         return $data;
@@ -60,10 +83,16 @@
     function validacaoTipoCartao($tipoCartao){
 
         if($tipoCartao != "credito" && $tipoCartao != "debito"){
-            exit();
+            erro();
         }
 
         return $tipoCartao;
 
     }
 
+    function erro(){
+
+        header('Location: /experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/pages/finalizacaoCadastro.html');
+        exit();
+
+    }

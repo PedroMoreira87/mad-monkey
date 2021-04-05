@@ -1,6 +1,7 @@
 <?php
 
     include("conexao.php");
+    include('situacaoLogin.php');
 
     $token = basename($_SERVER['REQUEST_URI']);
 
@@ -10,14 +11,10 @@
    
     if(mysqli_num_rows($resultado) > 0){
 
-        while ($row = mysqli_fetch_row($resultado)) {
-
-            $name = $row[0];
-            $email = $row[1];
-            $password = $row[2];
-          
-    
-        }
+        $row = mysqli_fetch_row($resultado);
+        $name = $row[0];
+        $email = $row[1];
+        $password = $row[2];
         
         $query = "INSERT INTO usuarios (name, email, password) VALUES ('$name', '$email', '$password')";
         mysqli_query($conexao, $query);
@@ -30,7 +27,7 @@
 
     }
 
-    header('Location: /experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/pages/confirmacaoCadastro.html');
+    header('Location: /experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/pages/finalizacaoCadastro.html');
     exit();
 
 ?>
