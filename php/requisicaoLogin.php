@@ -1,5 +1,6 @@
 <?php
 
+    session_start();
     include('conexao.php');
 
     $email = $_POST["email-login"];
@@ -10,7 +11,6 @@
 
     if(mysqli_num_rows($resultado) > 0){
 
-        session_start();
         $_SESSION['email'] = $email;
         $_SESSION['password'] = $password;
         header("Location: /experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/php/situacaoUsuario.php");
@@ -18,7 +18,7 @@
 
     }
     else{
-        echo("errouu");
+        $_SESSION['usuario-logado'] = false;
     }
 
     mysqli_close($conexao);

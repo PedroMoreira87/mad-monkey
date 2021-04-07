@@ -1,7 +1,6 @@
 <?php
 
     include("conexao.php");
-    include('situacaoLogin.php');
 
     $token = basename($_SERVER['REQUEST_URI']);
 
@@ -22,12 +21,11 @@
         $query = "DELETE from usuariosprovisorios WHERE confirmation_token = '$token'";
         mysqli_query($conexao, $query);
 
-        
         mysqli_close($conexao);
 
     }
 
-    header('Location: /experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/pages/finalizacaoCadastro.html');
+    header('Location: /experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/php/paginaFinalizacaoCadastro.php');
     exit();
 
 ?>

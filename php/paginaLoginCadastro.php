@@ -26,7 +26,7 @@
 
                 <div class="cadastrologin-form-content">
 
-                    <form method="POST" action='../php/login.php' class="cadastrologin-form-content-centralizer absolute-centralizer">
+                    <form method="POST" action='requisicaoLogin.php' class="cadastrologin-form-content-centralizer absolute-centralizer">
                         <input type="text" class="cadastrologin-form-input" placeholder="Login" name="email-login">
                         <input type="password" class="cadastrologin-form-input" placeholder="Senha" name="password-login">
                         <a href="#" class="login-form-esqueceusenha">Esqueci minha senha</a>
@@ -63,13 +63,13 @@
 
                 <div class="cadastrologin-form-content">
 
-                    <div class="cadastrologin-form-content-centralizer absolute-centralizer">
-                        <input type="text" class="cadastrologin-form-input" placeholder="Digite seu Nome" id="name-cadastro">
-                        <input type="text" class="cadastrologin-form-input" placeholder="Digite um e-mail" id="email-cadastro">
-                        <input type="password" class="cadastrologin-form-input" placeholder="Digite uma senha" id="password-cadastro">
+                    <form method="POST" action="requisicaoCadastro.php" class="cadastrologin-form-content-centralizer absolute-centralizer">
+                        <input type="text" class="cadastrologin-form-input" placeholder="Digite seu Nome" name="name-cadastro">
+                        <input type="text" class="cadastrologin-form-input" placeholder="Digite um e-mail" name="email-cadastro">
+                        <input type="password" class="cadastrologin-form-input" placeholder="Digite uma senha" name="password-cadastro">
                         <input type="password" class="cadastrologin-form-input" placeholder="Confirme sua senha">
-                        <button id="botao-cadastrar" class="cadastrologin-form-button" >SIGN UP</button>
-                    </div>
+                        <button class="cadastrologin-form-button" >SIGN UP</button>
+                    </form>
 
                 </div>
 

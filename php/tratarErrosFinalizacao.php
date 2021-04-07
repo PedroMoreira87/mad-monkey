@@ -92,7 +92,7 @@
 
     function erro(){
 
-        header('Location: /experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/pages/finalizacaoCadastro.html');
+        header('Location: /experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/php/paginaFinalizacaoCadastro.php');
         exit();
 
     }

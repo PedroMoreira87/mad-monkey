@@ -2,9 +2,9 @@
 
     include('conexao.php');
 
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
+    $name = $_POST['name-cadastro'];
+    $email = $_POST['email-cadastro'];
+    $password = hash('sha256', $_POST['password-cadastro']);
     $token = gerarToken();
 
     session_start();

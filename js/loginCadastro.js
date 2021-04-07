@@ -5,7 +5,6 @@ $(document).ready(function (){
 
     $(".pagina-cadastro").css("display", "none")
     $(".cadastrologin-link-image-button").click(mudarPagina)
-    $("#botao-cadastrar").click(enviarEmail)
 
 })
 
@@ -42,23 +41,3 @@ function mudarPagina(){
 
 }
 
-function hashSenha(senha){
-
-    var myBitArray = sjcl.hash.sha256.hash(senha)
-    var senha_hash_sha256 = sjcl.codec.hex.fromBits(myBitArray)
-    return senha_hash_sha256
-
-}
-
-function enviarEmail(){
-    $.ajax({
-        type: "POST",
-        dataType: "json",
-        url: "../php/usuarioProvisorio.php",
-        data: {
-            name: $("#name-cadastro").val(),
-            email: $("#email-cadastro").val(),
-            password: hashSenha($("#password-cadastro").val())
-        }
-    })
-}

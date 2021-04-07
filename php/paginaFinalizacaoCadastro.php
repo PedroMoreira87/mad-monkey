@@ -15,7 +15,7 @@
 
     </div>
 
-    <form method="POST" action="../php/finalizarCadastro.php">
+    <form method="POST" action="requisicaoFinalizacaoCadastro.php">
 
         <div class="content-principal content-principal1">
             <div class="content-centralizer content-centralizer1">
@@ -144,7 +144,5 @@
         </div>
     </form>
 
-
-    
 </body>
 </html>

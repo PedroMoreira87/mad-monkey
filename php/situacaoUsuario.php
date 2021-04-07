@@ -13,7 +13,7 @@
     $active = $row[0];
 
     if($active == 0){
-        header("Location: /experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/pages/finalizacaoCadastro.html");
+        header("Location: /experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/php/paginaFinalizacaoCadastro.php");
         exit();
     }
     else{
