@@ -11,8 +11,9 @@
 
     if(mysqli_num_rows($resultado) > 0){
 
-        $_SESSION['email'] = $email;
-        $_SESSION['password'] = $password;
+        $row = mysqli_fetch_row($resultado);
+        $id = $row[0];
+        $_SESSION['id'] = $id;
         header("Location: /experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/php/situacaoUsuario.php");
         exit();
 

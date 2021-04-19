@@ -4,13 +4,9 @@
 
     $name = $_POST['name-cadastro'];
     $email = $_POST['email-cadastro'];
-    $password = hash('sha256', $_POST['password-cadastro']);
+    $password = $_POST['senha_hash'];
     $token = gerarToken();
 
-    session_start();
-    $_SESSION['email'] = $email;
-    $_SESSION['password'] = $password;
-    
     colocarNoBanco($conexao, $name, $email, $password, $token);
     enviarEmailConfirmacao($email, $token);
 
@@ -40,7 +36,7 @@
 
         include("PHPMailer/PHPMailerAutoload.php");
 
-        $linkConfirmacao = "192.168.0.14/experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/php/confirmacaoCadastro.php/"
+        $linkConfirmacao = "localhost/experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/php/confirmacaoCadastro.php/"
         .$token;
     
         $mailer = new PHPMailer;

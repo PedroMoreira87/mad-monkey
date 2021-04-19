@@ -2,11 +2,11 @@
 <head>
     <meta charset="UTF-8">
 
-
     <link rel="stylesheet" href="../css/loginCadastro.css">
     <script src="../js/jquery-3.6.0.js"></script>
     <script src="../js/sjcl.js"></script>
     <script src="../js/loginCadastro.js"></script>
+    <script src="../js/requisicaoCadastro.js"></script>
 
     <title>Login - MadMonkey</title>
 </head>
@@ -30,7 +30,7 @@
                         <input type="text" class="cadastrologin-form-input" placeholder="Login" name="email-login">
                         <input type="password" class="cadastrologin-form-input" placeholder="Senha" name="password-login">
                         <a href="#" class="login-form-esqueceusenha">Esqueci minha senha</a>
-                        <button id="botao-logar" class="cadastrologin-form-button">LOGIN</button>
+                        <button id="bAcessar" class="cadastrologin-form-button">LOGIN</button>
                     </form>
 
                 </div>
@@ -63,12 +63,13 @@
 
                 <div class="cadastrologin-form-content">
 
-                    <form method="POST" action="requisicaoCadastro.php" class="cadastrologin-form-content-centralizer absolute-centralizer">
+                    <form id="form-cadastro" class="cadastrologin-form-content-centralizer absolute-centralizer">
                         <input type="text" class="cadastrologin-form-input" placeholder="Digite seu Nome" name="name-cadastro">
                         <input type="text" class="cadastrologin-form-input" placeholder="Digite um e-mail" name="email-cadastro">
-                        <input type="password" class="cadastrologin-form-input" placeholder="Digite uma senha" name="password-cadastro">
+                        <input type="password" id="senha" class="cadastrologin-form-input" placeholder="Digite uma senha">
                         <input type="password" class="cadastrologin-form-input" placeholder="Confirme sua senha">
-                        <button class="cadastrologin-form-button" >SIGN UP</button>
+                        <input type="hidden" name="senha_hash" id="senha_hash" />
+                        <button id="bCadastrar" class="cadastrologin-form-button" >SIGN UP</button>
                     </form>
 
                 </div>

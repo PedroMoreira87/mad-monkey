@@ -15,8 +15,7 @@
 
     session_start();
 
-    $email = $_SESSION['email'];
-    $password = $_SESSION['password'];
+    $id = $_SESSION['id'];
 
     $query = "UPDATE usuarios SET
     plano = '$plano',
@@ -27,11 +26,11 @@
     card_number = '$numeroCartao',
     expiration_date = '$dataCartao',
     security_code = '$codigoCartao',
-    tipo_cartao = '$tipoCartao' 
-    WHERE email = '$email' AND password = '$password';
-    UPDATE usuarios SET active = 1 WHERE email = '$email' AND password = '$password'";
+    tipo_cartao = '$tipoCartao',
+    active = 1
+    WHERE id = $id";
 
-    mysqli_multi_query($conexao, $query);
+    mysqli_query($conexao, $query);
 
     mysqli_close($conexao);
 

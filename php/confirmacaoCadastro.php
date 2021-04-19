@@ -8,7 +8,7 @@
 
     $resultado = mysqli_query($conexao, $query);
    
-    if(mysqli_num_rows($resultado) > 0){
+    if($resultado){
 
         $row = mysqli_fetch_row($resultado);
         $name = $row[0];
