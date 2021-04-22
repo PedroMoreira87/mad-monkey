@@ -19,14 +19,6 @@ header {
     background: #0F171E;
 }
 
-.header_text_align {
-    display: flex;
-    color: #8197A4;
-    justify-content: left;
-    margin-left: 0.5%;
-    font-size: 15px;
-}
-
 main {
     grid-area: m;
     background-image: url("../img/index_fundo.jpeg");
@@ -36,14 +28,14 @@ main {
     color: #8197A4;
 }
 
-.main_logo {
+.main-logo {
     display: flex;
     margin-left: 170px;
     margin-top: 150px;
     width: 8%;
 }
 
-.main_text {
+.main-text {
     display: flex;
     color: white;
     margin-left: 170px;
@@ -51,7 +43,7 @@ main {
     font-size:38px;
 }
 
-.main_text1 {
+.main-text1 {
     display: flex;
     color: white;
     margin-left: 170px;
@@ -59,7 +51,7 @@ main {
 
 }
 
-.main_button {
+.main-button {
     display: flex;
     background-color: #8B0000;
     border: none;
@@ -72,7 +64,7 @@ main {
     border-radius: 4px;
 }
 
-.main_button:hover{
+.main-button:hover{
     color: white;
     background-color: red;
 }
@@ -82,7 +74,7 @@ footer {
     background: #0F171E;
 }
 
-.footer_logo {
+.footer-logo {
     display: flex;
     margin-left: auto;
     margin-right: auto;
@@ -90,13 +82,13 @@ footer {
     margin-top: 20px;
 }
 
-.footer_text {
+.footer-text {
     display: flex;
     color: #8197A4;
     justify-content: center;
     margin-top: -10px;
 }
 
-.footer_text1 {
+.footer-text1 {
     padding: 10px;
 }
