@@ -3,6 +3,50 @@ $(document).ready(function(){
     var carrossel
     var slider = $(".slider")
 
+
+    //Load titles
+
+    loadTitles();
+
+
+    //Title information
+    $(".titulo-carousel").click(function(){
+
+        $(".title-visualization").css("display", "flex");
+        $(".title-visualization--centralizer").css("animation", "title-visualization-increase .7s");
+        var titleID = $(this).attr("movieID"); 
+        showTitleInformation(titleID);
+    })
+
+    $(".title-visualization").click(function(){;
+
+        var video = $(".title-prev-video").get(0);
+        
+        $(".title-visualization--centralizer").css("animation", "title-visualization-decrease .2s");
+        setTimeout(function(){
+            $(".title-visualization").css("display", "none");
+            fade()
+        }, 200)
+
+        function fade(){
+            if(video.volume > 0){
+                video.volume -= 0.1;
+                setTimeout(fade, 10);
+            }else{
+                video.pause();
+            }
+        }
+        
+    })
+
+    $(".title-visualization--centralizer").click(function(){
+ 
+        return false;
+    
+    })
+
+    //Carousel
+
     $(".arrow").click(function(){
         carrossel = $(this).parents(".container-carousel").children(".carousel")
         slider = $(carrossel).children(".slider")
@@ -58,3 +102,54 @@ $(document).ready(function(){
     })
 
 })
+
+function loadTitles(){
+
+    $.when(ajaxRequest(null, "load_titles")).then(
+        function(titles){
+
+            for(var i = 0; i < titles.length; i++){
+
+                $(".titulo-carousel").eq(i).attr("movieID", titles[i][0])
+                $(".titulo-carousel").eq(i).css("background-image", 
+                "url('/experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/titles_src/thumbnails/" + titles[i][1] + ".jpg')"); 
+
+            }
+
+        }
+    );
+
+}
+
+function showTitleInformation(titleID){
+
+    var video = $(".title-prev-video").get(0);
+    video.volume = 1.0
+
+    $request = $.ajax({
+        type:"POST",
+        dataType: "json",
+        url: "/experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/php/load_title_information.php",
+        data: {
+            "titleID": titleID
+        }
+    });
+
+    $.when($request).then(
+        function(titles){
+
+            $(".title-name").attr("src", "/experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/titles_src/names/" + titles["name"] + ".png")
+            $("#title-relevance").text(titles["relevance"] + "% Relevante")
+            $("#title-year").text(titles["year"])
+            $(".title-parental").attr("src", "/experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/titles_src/parental_icons/" + titles["parental_rating"] + ".png")
+            $("#title-length").text(titles["length"])
+            $("#title-description").text(titles["description"])
+            $(".title-prev-video").attr("src", "/experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/titles_src/videos/" + titles["name"] + ".mp4")
+            $(".title-about--header").text("Sobre: " + titles["name"])
+            $("#title-direction").text(titles["director"])
+        }
+    );
+
+    $(".title-prev-video").get(0).currentTime = 0;
+
+}
