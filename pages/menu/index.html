@@ -4,31 +4,51 @@
     <meta charset="UTF-8">
     <title>Title</title>
 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script type="text/javascript" src="../../js/biblioteca/jquery-3.6.0.js"></script>
+
+    <script src="/experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/js/ajax_requests.js"></script>
     <script type="text/javascript" src="../../js/menu/index.js"></script>
     <link rel="stylesheet" type="text/css" href="../../css/all.css">
     <link rel="stylesheet" type="text/css" href="../../css/menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
 <body>
     <div class="container">
         <aside>
             <img src="../../img/logo.png" class="aside-logo" alt="" >
-            <svg class="aside-icon" id="Outline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>127 home</title><path d="M23.121,9.069,15.536,1.483a5.008,5.008,0,0,0-7.072,0L.879,9.069A2.978,2.978,0,0,0,0,11.19v9.817a3,3,0,0,0,3,3H21a3,3,0,0,0,3-3V11.19A2.978,2.978,0,0,0,23.121,9.069ZM15,22.007H9V18.073a3,3,0,0,1,6,0Zm7-1a1,1,0,0,1-1,1H17V18.073a5,5,0,0,0-10,0v3.934H3a1,1,0,0,1-1-1V11.19a1.008,1.008,0,0,1,.293-.707L9.878,2.9a3.008,3.008,0,0,1,4.244,0l7.585,7.586A1.008,1.008,0,0,1,22,11.19Z"/></svg>
-            <h3 class="aside-text">Início</h3>
-            <svg class="aside-icon" id="Outline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>47 tv</title><path d="M19,3H5A5.006,5.006,0,0,0,0,8v6a5.006,5.006,0,0,0,5,5h6v1H8a1,1,0,0,0,0,2h8a1,1,0,0,0,0-2H13V19h6a5.006,5.006,0,0,0,5-5V8A5.006,5.006,0,0,0,19,3Zm3,11a3,3,0,0,1-3,3H5a3,3,0,0,1-3-3V8A3,3,0,0,1,5,5H19a3,3,0,0,1,3,3Z"/></svg>
-            <h3 class="aside-text">Séries</h3>
-            <svg class="aside-icon" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,0H5A5.006,5.006,0,0,0,0,5V19a5.006,5.006,0,0,0,5,5H19a5.006,5.006,0,0,0,5-5V5A5.006,5.006,0,0,0,19,0Zm1,11h2v2H20Zm0-2V7h2V9Zm-2,2H6V2H18ZM4,13H2V11H4ZM4,9H2V7H4ZM2,15H4v2H2Zm4-2H18v9H6Zm14,2h2v2H20ZM22,5H20V2.184A3,3,0,0,1,22,5ZM4,2.184V5H2A3,3,0,0,1,4,2.184ZM2,19H4v2.816A3,3,0,0,1,2,19Zm18,2.816V19h2A3,3,0,0,1,20,21.816Z"/></svg>
-            <h3 class="aside-text">Filmes</h3>
-            <svg class="aside-icon" id="Capa_1" enable-background="new 0 0 512.004 512.004" height="512" viewBox="0 0 512.004 512.004" width="512" xmlns="http://www.w3.org/2000/svg"><g><path d="m433.519 326.583c44.063-3.841 78.483-34.029 78.483-70.583 0-36.555-34.42-66.743-78.483-70.584-17.083-42.921-49.394-78.429-90.567-99.51-1.099-46.983-39.391-85.906-86.95-85.906-47.523 0-85.85 38.88-86.949 85.907-41.174 21.081-73.485 56.59-90.567 99.51-44.064 3.84-78.484 34.028-78.484 70.583 0 36.558 34.425 66.747 78.493 70.584 14.207 35.609 39.197 66.452 70.952 87.912-25.778 20.27-44.952 47.234-54.979 77.833-2.58 7.872 1.711 16.345 9.583 18.925 7.872 2.579 16.345-1.712 18.925-9.583 9.468-28.892 29.034-53.882 55.478-71.09 51.076 22.764 108.901 21.406 157.845-1.26 27.456 17.228 47.723 42.665 57.448 72.349 2.58 7.873 11.051 12.162 18.925 9.584 7.873-2.58 12.164-11.052 9.584-18.925-10.334-31.54-30.275-59.103-57.157-79.532 29.671-20.653 54.171-50.322 68.42-86.214zm48.483-70.583c0 17.523-16.517 32.894-38.914 38.617 5.214-25.362 5.225-51.818 0-77.233 22.397 5.722 38.914 21.093 38.914 38.616zm-226-226c28.873 0 52.8 21.955 56.502 50.321-35.872 3.083-65.589 27.873-75.757 61.366-22.231-7.906-37.745-29.065-37.745-53.688 0-31.98 25.57-57.999 57-57.999zm-226 226c0-17.523 16.517-32.894 38.914-38.617-5.214 25.362-5.225 51.818 0 77.233-22.397-5.722-38.914-21.093-38.914-38.616zm300.076 142.988c-86.299 44.823-193.693 3.849-226.805-91.923-24.054-71.962 5.502-151.005 70.809-189.679 10.948 30.681 38.599 53.534 72.726 57.126 8.262.869 15.65-5.143 16.493-13.393 3.125-30.584 29.847-53.289 61.013-50.936 73.315 34.395 110.506 118.827 84.416 196.881-14.501 42.042-43.611 73.733-78.652 91.924z"/><path d="m219.177 238.323c5.858-5.858 5.858-15.355 0-21.213-21.494-21.494-56.285-21.497-77.782 0-5.858 5.858-5.858 15.355 0 21.213 5.857 5.858 15.355 5.858 21.213 0 9.771-9.77 25.584-9.771 35.355 0 5.858 5.857 15.355 5.858 21.214 0z"/><path d="m371.177 217.109c-21.494-21.494-56.285-21.497-77.782 0-5.858 5.858-5.858 15.355 0 21.213 5.857 5.858 15.355 5.858 21.213 0 9.771-9.77 25.584-9.771 35.355 0 5.857 5.857 15.354 5.859 21.213 0 5.859-5.857 5.859-15.355.001-21.213z"/><path d="m284.994 317.393c-15.986 15.986-41.997 15.986-57.983 0-5.857-5.857-15.355-5.858-21.213 0-5.857 5.858-5.857 15.355 0 21.213 27.683 27.682 72.726 27.682 100.409 0 5.858-5.858 5.858-15.355 0-21.213-5.859-5.857-15.355-5.857-21.213 0z"/></g></svg>
-            <h3 class="aside-text">Infantil</h3>
-            <svg class="aside-icon" id="Outline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>96 following</title><path d="M9,12A6,6,0,1,0,3,6,6.006,6.006,0,0,0,9,12ZM9,2A4,4,0,1,1,5,6,4,4,0,0,1,9,2Z"/><path d="M9,14a9.011,9.011,0,0,0-9,9,1,1,0,0,0,2,0,7,7,0,0,1,14,0,1,1,0,0,0,2,0A9.011,9.011,0,0,0,9,14Z"/><path d="M22,7.875a2.107,2.107,0,0,0-2,2.2,2.107,2.107,0,0,0-2-2.2,2.107,2.107,0,0,0-2,2.2c0,1.73,2.256,3.757,3.38,4.659a.992.992,0,0,0,1.24,0c1.124-.9,3.38-2.929,3.38-4.659A2.107,2.107,0,0,0,22,7.875Z"/></svg>
-            <h3 class="aside-text">Favoritos</h3>
-            <svg class="aside-icon" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14,24a1,1,0,0,1-.6-.2l-4-3A1,1,0,0,1,9,20V14.38L1.984,6.487A3.9,3.9,0,0,1,4.9,0H19.1a3.9,3.9,0,0,1,2.913,6.488L15,14.38V23a1,1,0,0,1-1,1Zm-3-4.5L13,21V14a1,1,0,0,1,.253-.664l7.268-8.177A1.9,1.9,0,0,0,19.1,2H4.9A1.9,1.9,0,0,0,3.479,5.158l7.269,8.178A1,1,0,0,1,11,14Z"/></svg>
-            <h3 class="aside-text">Filtro</h3>
-            <svg class="aside-icon-user" id="Outline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>36 image person</title><path d="M19,0H5A5.006,5.006,0,0,0,0,5V19a5.006,5.006,0,0,0,5,5H19a5.006,5.006,0,0,0,5-5V5A5.006,5.006,0,0,0,19,0ZM7,22V21a5,5,0,0,1,10,0v1Zm15-3a3,3,0,0,1-3,3V21A7,7,0,0,0,5,21v1a3,3,0,0,1-3-3V5A3,3,0,0,1,5,2H19a3,3,0,0,1,3,3Z"/><path d="M12,4a4,4,0,1,0,4,4A4,4,0,0,0,12,4Zm0,6a2,2,0,1,1,2-2A2,2,0,0,1,12,10Z"/></svg>
-            <h3 class="aside-text">Usuário</h3>
-            <svg class="aside-icon-options" id="Outline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>135 settings</title><path d="M12,8a4,4,0,1,0,4,4A4,4,0,0,0,12,8Zm0,6a2,2,0,1,1,2-2A2,2,0,0,1,12,14Z"/><path d="M21.294,13.9l-.444-.256a9.1,9.1,0,0,0,0-3.29l.444-.256a3,3,0,1,0-3-5.2l-.445.257A8.977,8.977,0,0,0,15,3.513V3A3,3,0,0,0,9,3v.513A8.977,8.977,0,0,0,6.152,5.159L5.705,4.9a3,3,0,0,0-3,5.2l.444.256a9.1,9.1,0,0,0,0,3.29l-.444.256a3,3,0,1,0,3,5.2l.445-.257A8.977,8.977,0,0,0,9,20.487V21a3,3,0,0,0,6,0v-.513a8.977,8.977,0,0,0,2.848-1.646l.447.258a3,3,0,0,0,3-5.2Zm-2.548-3.776a7.048,7.048,0,0,1,0,3.75,1,1,0,0,0,.464,1.133l1.084.626a1,1,0,0,1-1,1.733l-1.086-.628a1,1,0,0,0-1.215.165,6.984,6.984,0,0,1-3.243,1.875,1,1,0,0,0-.751.969V21a1,1,0,0,1-2,0V19.748a1,1,0,0,0-.751-.969A6.984,6.984,0,0,1,7.006,16.9a1,1,0,0,0-1.215-.165l-1.084.627a1,1,0,1,1-1-1.732l1.084-.626a1,1,0,0,0,.464-1.133,7.048,7.048,0,0,1,0-3.75A1,1,0,0,0,4.79,8.992L3.706,8.366a1,1,0,0,1,1-1.733l1.086.628A1,1,0,0,0,7.006,7.1a6.984,6.984,0,0,1,3.243-1.875A1,1,0,0,0,11,4.252V3a1,1,0,0,1,2,0V4.252a1,1,0,0,0,.751.969A6.984,6.984,0,0,1,16.994,7.1a1,1,0,0,0,1.215.165l1.084-.627a1,1,0,1,1,1,1.732l-1.084.626A1,1,0,0,0,18.746,10.125Z"/></svg>
+            <button class="aside-button">
+                <i class="fas fa-home aside-icon"></i>
+                Início
+            </button>
+            <button class="aside-button">
+                <i class="fas fa-tv aside-icon"></i>
+                Séries
+            </button>
+            <button class="aside-button">
+                <i class="fas fa-film aside-icon"></i>
+                Filmes
+            </button>
+            <button class="aside-button">
+                <i class="fas fa-child aside-icon"></i>
+                Infantil
+            </button>
+            <button class="aside-button">
+                <i class="far fa-star aside-icon"></i>
+                Favoritos
+            </button>
+            <button class="aside-button">
+                <i class="fas fa-filter aside-icon"></i>
+                Filtro
+            </button>
+            <button class="aside-button1">
+                <i class="far fa-user aside-icon"></i>
+                Usuário
+                <i class="fas fa-cog aside-icon1"></i>
+            </button>
         </aside>
 
         <main>
@@ -39,60 +59,60 @@
                 <div class="carousel">
                     <div class="slider">
                         <section>
-                            <div class="titulo-carousel">1</div>
-                            <div class="titulo-carousel">1</div>
-                            <div class="titulo-carousel">1</div>
-                            <div class="titulo-carousel">1</div>
-                            <div class="titulo-carousel">1</div>
-                            <div class="titulo-carousel">1</div>
+                            <div class="titulo-carousel" movieID=""></div>
+                            <div class="titulo-carousel" movieID=""></div>
+                            <div class="titulo-carousel" movieID=""></div>
+                            <div class="titulo-carousel" movieID=""></div>
+                            <div class="titulo-carousel" movieID=""></div>
+                
                         </section>
                         <section>
-                            <div class="titulo-carousel">2</div>
-                            <div class="titulo-carousel">2</div>
-                            <div class="titulo-carousel">2</div>
-                            <div class="titulo-carousel">2</div>
-                            <div class="titulo-carousel">2</div>
-                            <div class="titulo-carousel">2</div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+
                         </section>
                         <section>
-                            <div class="titulo-carousel">3</div>
-                            <div class="titulo-carousel">3</div>
-                            <div class="titulo-carousel">3</div>
-                            <div class="titulo-carousel">3</div>
-                            <div class="titulo-carousel">3</div>
-                            <div class="titulo-carousel">3</div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            
                         </section>
                         <section>
-                            <div class="titulo-carousel">4</div>
-                            <div class="titulo-carousel">4</div>
-                            <div class="titulo-carousel">4</div>
-                            <div class="titulo-carousel">4</div>
-                            <div class="titulo-carousel">4</div>
-                            <div class="titulo-carousel">4</div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                 
                         </section>
                         <section>
-                            <div class="titulo-carousel">5</div>
-                            <div class="titulo-carousel">5</div>
-                            <div class="titulo-carousel">5</div>
-                            <div class="titulo-carousel">5</div>
-                            <div class="titulo-carousel">5</div>
-                            <div class="titulo-carousel">5</div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                  
                         </section>
                         <section>
-                            <div class="titulo-carousel">6</div>
-                            <div class="titulo-carousel">6</div>
-                            <div class="titulo-carousel">6</div>
-                            <div class="titulo-carousel">6</div>
-                            <div class="titulo-carousel">6</div>
-                            <div class="titulo-carousel">6</div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            
                         </section>
                         <section>
-                            <div class="titulo-carousel">7</div>
-                            <div class="titulo-carousel">7</div>
-                            <div class="titulo-carousel">7</div>
-                            <div class="titulo-carousel">7</div>
-                            <div class="titulo-carousel">7</div>
-                            <div class="titulo-carousel">7</div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                          
                         </section>
                     </div>
                 </div>
@@ -107,60 +127,60 @@
                 <div class="carousel">
                     <div class="slider">
                         <section>
-                            <div class="titulo-carousel">1</div>
-                            <div class="titulo-carousel">1</div>
-                            <div class="titulo-carousel">1</div>
-                            <div class="titulo-carousel">1</div>
-                            <div class="titulo-carousel">1</div>
-                            <div class="titulo-carousel">1</div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                          
                         </section>
                         <section>
-                            <div class="titulo-carousel">2</div>
-                            <div class="titulo-carousel">2</div>
-                            <div class="titulo-carousel">2</div>
-                            <div class="titulo-carousel">2</div>
-                            <div class="titulo-carousel">2</div>
-                            <div class="titulo-carousel">2</div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                           
                         </section>
                         <section>
-                            <div class="titulo-carousel">3</div>
-                            <div class="titulo-carousel">3</div>
-                            <div class="titulo-carousel">3</div>
-                            <div class="titulo-carousel">3</div>
-                            <div class="titulo-carousel">3</div>
-                            <div class="titulo-carousel">3</div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                        
                         </section>
                         <section>
-                            <div class="titulo-carousel">4</div>
-                            <div class="titulo-carousel">4</div>
-                            <div class="titulo-carousel">4</div>
-                            <div class="titulo-carousel">4</div>
-                            <div class="titulo-carousel">4</div>
-                            <div class="titulo-carousel">4</div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                         
                         </section>
                         <section>
-                            <div class="titulo-carousel">5</div>
-                            <div class="titulo-carousel">5</div>
-                            <div class="titulo-carousel">5</div>
-                            <div class="titulo-carousel">5</div>
-                            <div class="titulo-carousel">5</div>
-                            <div class="titulo-carousel">5</div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            
                         </section>
                         <section>
-                            <div class="titulo-carousel">6</div>
-                            <div class="titulo-carousel">6</div>
-                            <div class="titulo-carousel">6</div>
-                            <div class="titulo-carousel">6</div>
-                            <div class="titulo-carousel">6</div>
-                            <div class="titulo-carousel">6</div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                           
                         </section>
                         <section>
-                            <div class="titulo-carousel">7</div>
-                            <div class="titulo-carousel">7</div>
-                            <div class="titulo-carousel">7</div>
-                            <div class="titulo-carousel">7</div>
-                            <div class="titulo-carousel">7</div>
-                            <div class="titulo-carousel">7</div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                          
                         </section>
                     </div>
                 </div>
@@ -170,5 +190,68 @@
             </div>
         </main>
     </div>
+
+    <div class="title-visualization">
+        <div class="title-visualization--centralizer">
+            <div class="section title-preview">
+                <video class="title-prev-video" src="" autoplay></video>
+                <div class="title-section title-basic-information">
+                    <div class="title-basic--content">
+                        <img class="title-name" src="" alt="title-name">
+                        <button class="watch-button"><i class="fas fa-play"></i>Assistir</button>
+                    </div>
+                </div>
+            </div>
+            <div class="title-section title-detailed-information">
+                <div class="title-detailed--section">
+                    <div class="detailed-text">
+                        <p><highlight class="green-highlight" id="title-relevance">97% relevante</highlight></p>
+                        <p id="title-year">2021</p>
+                        <img class="title-parental" src="" alt="parental-advisory">
+                        <p id="title-length">1h 49min</p>
+                    </div>
+           
+                    <br>
+                    <br>
+                    <p id="title-description">Sete anos depois de nao sei oque é isso dai mesmo</p>
+                </div>
+                <div class="title-detailed--section">
+                    <p><highlight class="grey-highlight">Elenco: </highlight>carinha1, carinha2, carinha3, carina4, ver mais</p>
+                    <br>
+                    <p><highlight class="grey-highlight">Generos: </highlight>genero1, genero2, genero3, genero4, ver mais</p>
+                </div>
+            </div>
+            <div class="title-section title-about">
+                <p class="title-about--header"></p>
+                <br>
+                <div class="title-info-inline">
+                    <p class="grey-highlight">Direção: </p>
+                    <p id="title-direction"></p>
+                </div>
+                <br>
+                <div class="title-info-inline">
+                    <p class="grey-highlight">Elenco: </p>
+                    <p id="title-cast">carinha1, carinha2, carinha3, carina4, ver mais</p>
+                </div>
+                <br>
+                <div class="title-info-inline">
+                    <p class="grey-highlight">Roteiro: </p>
+                    <p id="title-script">carinha1, carinha2, carinha3, carina4, ver mais</p>
+                </div>
+                <br>
+                <div class="title-info-inline">
+                    <p class="grey-highlight">Gêneros: </p>
+                    <p id="title-genre">genero1, genero2, genero3, genero4, ver mai</p>
+                </div>
+                <br>
+                <div class="title-info-inline">
+                    <p class="grey-highlight">Classificação etária: </p>
+                    <img class="title-parental" src="">
+                </div>
+            </div>
+        </div>
+       
+    </div>
+
 </body>
 </html>
