@@ -41,7 +41,7 @@ function checkUserStatus(){
 
             if(status == "active"){
 
-                window.location.href = "/mad_monkey/html/main/index.html";
+                window.location.href = "/experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/html/main/index.html";
         
             }
 
