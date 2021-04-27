@@ -1,8 +1,17 @@
-html, body {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-x: hidden;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+
+
+}
+
+:root{
+
+    overflow-y:visible;
+
 }
 
 .container {
@@ -11,68 +20,64 @@ html, body {
     grid-template-rows: 100vh;
     grid-template-areas:
             "a m";
+    position: absolute;
 }
 
 aside {
     grid-area: a;
     background: #1B2530;
     z-index: 2;
-}
-
-svg{
-    width: 30px;
-    height: 30px;
-    margin-left: 20px;
-    margin-top: 35px;
-    fill: #8197A4;
-}
-
-svg:hover {
-    fill: white;
-    cursor: pointer;
+    position: relative;
 }
 
 .aside-logo{
     display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 30px;
+    margin: 30px auto 10px;
     width: 50%;
 }
 
-.aside-icon{
+.aside-button{
     display: flex;
-    margin-left: 20px;
-    margin-top: 35px;
-    width: 8%;
-}
-
-.aside-icon-user{
-    display: flex;
-    margin-left: 20px;
-    margin-top: 390px;
-    width: 8%;
-}
-
-.aside-icon-options{
-    display: flex;
-    margin-left: 270px;
-    margin-right: auto;
-    margin-top: -45px;
-    width: 8%;
-}
-
-.aside-text{
-    display: flex;
-    margin-left: 65px;
-    margin-right: auto;
-    margin-top: -25px;
+    align-items: center;
+    background-color: #1B2530;
+    height: 55px;
+    width: 100%;
+    font-size: 20px;
+    padding: 10px 0 10px 15px;
     color: #8197A4;
+    border: none;
 }
 
-.aside-text:hover {
+.aside-button:hover{
     color: white;
     cursor: pointer;
+}
+
+.aside-button1{
+    display: flex;
+    align-items: center;
+    background-color: #1B2530;
+    height: 55px;
+    width: 100%;
+    font-size: 20px;
+    padding-left: 15px;
+    position: absolute;
+    bottom: 0;
+    color: #8197A4;
+    border: none;
+}
+
+.aside-button1:hover{
+    color: white;
+    cursor: pointer;
+}
+
+.aside-icon{
+    margin-right: 15px;
+}
+
+.aside-icon1{
+    margin-left: 170px;
 }
 
 main {
@@ -83,7 +88,7 @@ main {
 
 .container-carousel{
     width: 100%;
-    height: 150px;
+    height: 120px;
     display: flex;
     margin-bottom: 50px;
 }
@@ -97,7 +102,6 @@ main {
 
 .arrow{
     width: 5%;
-    background-color: blue;
     z-index: 2;
     display: flex;
     justify-content: center;
@@ -114,20 +118,241 @@ main {
 }
 
 .slider section{
+
     width: 100%;
     height: 100%;
-    background: white;
-    
+    display: flex;
+    justify-content: space-between;
+ 
 }
 
 .titulo-carousel{
-    width: calc(100%/6);
+    width: 210px;
     height: 100%;
-    float: left;
+    background-color: black;
+    color: black;
+    background-size: cover;
+    margin-left: 5px;
+    border-radius: 3px;
+    cursor: pointer;
 }
 
-@keyframes mexer{
-    to{
-        transform: translateX(calc(100%/7));
+/* Title visualization */
+
+.title-visualization{
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.801);
+    display: none;
+
+}
+
+.title-visualization--centralizer{
+
+    margin: 30px auto 30px auto;
+    width: 60%;
+    background-color: #181818;
+    border-radius: 5px;
+    margin: 20px 0 20px 0;
+}
+
+.title-section{
+
+    width: 100%;
+
+}
+
+.title-preview{
+
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+
+.title-prev-video{
+
+    min-width: 100%;
+    min-height: 100%;
+
+}
+
+.title-basic-information{
+
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    bottom: 0;
+    background-image: linear-gradient(to top, #181818, rgba(255, 255, 255, 0));
+}
+
+.title-basic--content{
+
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+    
+}
+
+
+.title-name{
+
+    max-width: 300px;
+
+}
+
+.watch-button{
+    
+    margin-top: 25px;
+    padding: 10px 0 10px 0;
+    color: black;
+    background-color: white;
+    border: none;
+    width: 140px;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.watch-button:hover{
+
+    background-color: rgb(223, 223, 223);
+
+}
+
+.watch-button i{
+
+    color: black;
+    margin-right: 10px;
+
+}
+
+
+.title-detailed-information{
+
+    height: 300px;
+    display: flex; 
+    position: relative;
+    justify-content: space-between;
+}
+
+
+.title-detailed--section{
+
+    width: 60%;
+    height: 100%;
+    padding: 10px 10px 0 40px;
+
+}
+
+.title-detailed--section:nth-child(2){
+
+    width: 40%;
+
+}
+
+.detailed-text{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+
+}
+
+.green-highlight{
+
+    color: #46d369;
+
+}
+
+.title-parental{
+
+    width: 30px;
+
+}
+
+#title-description{
+
+    font-size: 18px;
+    line-height: 1.5em;
+}
+
+.title-about{
+
+    height: 270px;
+    padding: 0 40px 0 40px;
+
+}
+
+
+.title-about--header{
+
+    font-size: 25px;
+
+}
+
+
+.title-about p:not(.title-about--header){
+
+    font-size: 15px;
+
+}
+
+.grey-highlight{
+
+    color: grey;
+
+}
+
+.title-info-inline *{
+
+    display: inline-block;
+    vertical-align: middle;
+
+}
+
+@keyframes title-visualization-increase{
+
+    from{
+
+        transform: scale(0, 0);
+
     }
+
+    to{
+       
+        transform: scale(100%, 100%);
+
+    }
+
+}
+
+@keyframes title-visualization-decrease{
+
+    from{
+
+        transform: scale(100%, 100%);
+
+    }
+
+    to{
+       
+        transform: scale(50%, 50%);
+     
+
+    }
+
 }
