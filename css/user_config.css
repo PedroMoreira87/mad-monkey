@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 100vh;
+    grid-template-areas:
+            "a m";
+    position: absolute;
+}
+
+aside {
+    grid-area: a;
+    background: #1B2530;
+    z-index: 2;
+    position: relative;
+}
+
+.aside-logo{
+    display: flex;
+    margin: 30px auto 10px;
+    width: 50%;
+}
+
+.aside-button{
+    display: flex;
+    align-items: center;
+    background-color: #1B2530;
+    height: 55px;
+    width: 100%;
+    font-size: 20px;
+    padding: 10px 0 10px 15px;
+    color: #8197A4;
+    border: none;
+}
+
+.aside-button:hover{
+    color: white;
+    cursor: pointer;
+}
+
+.aside-button1{
+    display: flex;
+    align-items: center;
+    background-color: #1B2530;
+    height: 55px;
+    width: 100%;
+    font-size: 20px;
+    padding-left: 15px;
+    position: absolute;
+    bottom: 0;
+    color: #8197A4;
+    border: none;
+}
+
+.aside-button1:hover{
+    color: white;
+    cursor: pointer;
+}
+
+.aside-icon{
+    margin-right: 15px;
+}
+
+.aside-icon1{
+    margin-left: 170px;
+}
+
+main {
+    grid-area: m;
+    background: #0F171E;
+    padding-top: 30px;
+}
+
+.main-text-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.main-text-right{
+    margin-left: 100px;
+}
+
+.main-text-title{
+    color: white;
+    font-size: 22px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.main-text{
+    color: #8197A4;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.main-button{
+    display: flex;
+    background-color: #1B2530;
+    align-items: center;
+    height: 40px;
+    width: 700px;
+    font-size: 20px;
+    /*padding: 10px 0 10px 15px;*/
+    color: #8197A4;
+    border: none;
+}
+
+.main-button:hover{
+    color: white;
+    cursor: pointer;
+}

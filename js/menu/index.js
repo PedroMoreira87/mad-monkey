@@ -156,13 +156,13 @@ function showTitleInformation(titleID){
 }
 
 function fLocalEventosClick() {
-    $("#usuario-config").click(function () {
-        pagina("usuario-config");
+    $("#user-config").click(function () {
+        pagina("user-config");
     });
 }
 
 function pagina(pg) {
-    if (pg === "usuario-config") {
-        window.location.href = "usuario-config.html";
+    if (pg === "user-config") {
+        window.location.href = "../../pages/user_config/index.html";
     }
 }
