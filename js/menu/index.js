@@ -1,13 +1,13 @@
 $(document).ready(function(){
-    
+
+    fLocalEventosClick();
+
     var carrossel
     var slider = $(".slider")
-
 
     //Load titles
 
     loadTitles();
-
 
     //Title information
     $(".titulo-carousel").click(function(){
@@ -18,7 +18,7 @@ $(document).ready(function(){
         showTitleInformation(titleID);
     })
 
-    $(".title-visualization").click(function(){;
+    $(".title-visualization").click(function(){
 
         var video = $(".title-prev-video").get(0);
         
@@ -101,6 +101,7 @@ $(document).ready(function(){
         
     })
 
+
 })
 
 function loadTitles(){
@@ -152,4 +153,16 @@ function showTitleInformation(titleID){
 
     $(".title-prev-video").get(0).currentTime = 0;
 
+}
+
+function fLocalEventosClick() {
+    $("#usuario-config").click(function () {
+        pagina("usuario-config");
+    });
+}
+
+function pagina(pg) {
+    if (pg === "usuario-config") {
+        window.location.href = "usuario-config.html";
+    }
 }
