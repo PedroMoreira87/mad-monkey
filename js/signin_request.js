@@ -8,7 +8,8 @@ $(document).ready(function(){
         $.when(ajaxRequest("signin-form", "signin_request")).then(
             
             function(status){
-                if(status == true){
+                alert (status)
+                if(status == "true"){
                     checkUserStatus();
                 }
                 else{

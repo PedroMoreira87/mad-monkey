@@ -17,9 +17,9 @@ function fLocalEventosClick() {
 
 function pagina(pg) {
     if (pg === "password-change") {
-        window.location.href = "../../pages/password_change/index.html";
+        window.location.href = "../../pages/password_change/";
     }else if(pg === "card-change") {
-        window.location.href = "../../pages/card_change/index.html";
+        window.location.href = "../../pages/card_change/";
 
     }
 }

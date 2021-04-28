@@ -163,6 +163,6 @@ function fLocalEventosClick() {
 
 function pagina(pg) {
     if (pg === "user-config") {
-        window.location.href = "../../pages/user_config/index.html";
+        window.location.href = "../../pages/user_config/";
     }
 }

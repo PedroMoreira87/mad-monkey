@@ -4,6 +4,8 @@
     box-sizing: border-box;
     overflow: hidden;
     font-family: 'Roboto', sans-serif;
+
+    font-size: 15;
 }
 
 :root{
@@ -239,7 +241,7 @@ main {
 
 
 .title-detailed-information{
-
+    color: white;
     height: 300px;
     display: flex; 
     position: relative;
@@ -248,7 +250,7 @@ main {
 
 
 .title-detailed--section{
-
+    color: white;
     width: 60%;
     height: 100%;
     padding: 10px 10px 0 40px;
@@ -256,18 +258,16 @@ main {
 }
 
 .title-detailed--section:nth-child(2){
-
+    color: white;
     width: 40%;
 
 }
 
 .detailed-text{
-
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 300px;
-
 }
 
 .green-highlight{
@@ -277,7 +277,7 @@ main {
 }
 
 .title-parental{
-
+    color: white;
     width: 30px;
 
 }
@@ -286,37 +286,38 @@ main {
 
     font-size: 18px;
     line-height: 1.5em;
+    color: white;
 }
 
 .title-about{
 
     height: 270px;
     padding: 0 40px 0 40px;
+    color: white;
 
 }
 
 
 .title-about--header{
-
+    color: white;
     font-size: 25px;
 
 }
 
 
 .title-about p:not(.title-about--header){
-
+    color: white;
     font-size: 15px;
 
 }
 
 .grey-highlight{
-
     color: grey;
 
 }
 
 .title-info-inline *{
-
+    color: white;
     display: inline-block;
     vertical-align: middle;
 

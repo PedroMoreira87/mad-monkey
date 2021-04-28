@@ -8,9 +8,9 @@ $(document).ready(function(){
 
             function(status){
                 if(status){
-                    window.location.href = "/experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/html/main/index.html";
+                    window.location.href = "/experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/pages/menu/";
                 }else{
-                    window.location.href = "/experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/html/signup_conclusion.html";
+                    window.location.href = "/experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/pages/signup_conclusion/";
                 }
                 
             }
