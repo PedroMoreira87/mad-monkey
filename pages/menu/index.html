@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu</title>
+    <script type="text/javascript" src="../../js/biblioteca/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="../../js/menu/index.js"></script>
+    <script src="../../js/ajax_requests.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../../css/all.css">
+    <link rel="stylesheet" type="text/css" href="../../css/menu.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <aside>
+            <img src="../../img/logo.png" class="aside-logo" alt="" >
+            <button class="aside-button">
+                <i class="fas fa-home aside-icon"></i>
+                Início
+            </button>
+            <button class="aside-button">
+                <i class="fas fa-tv aside-icon"></i>
+                Séries
+            </button>
+            <button class="aside-button">
+                <i class="fas fa-film aside-icon"></i>
+                Filmes
+            </button>
+            <button class="aside-button">
+                <i class="fas fa-child aside-icon"></i>
+                Infantil
+            </button>
+            <button class="aside-button">
+                <i class="far fa-star aside-icon"></i>
+                Favoritos
+            </button>
+            <button class="aside-button">
+                <i class="fas fa-filter aside-icon"></i>
+                Filtro
+            </button>
+            <button class="aside-button1" id="user-config">
+                <i class="far fa-user aside-icon"></i>
+                Usuário
+                <i class="fas fa-cog aside-icon1"></i>
+            </button>
+        </aside>
+
+        <main>
+            <div class="container-carousel">
+                <div class="arrow prev">
+                    <i class="fas fa-chevron-left"></i>
+                </div>
+                <div class="carousel">
+                    <div class="slider">
+                        <section>
+                            <div class="titulo-carousel" movieID=""></div>
+                            <div class="titulo-carousel" movieID=""></div>
+                            <div class="titulo-carousel" movieID=""></div>
+                            <div class="titulo-carousel" movieID=""></div>
+                            <div class="titulo-carousel" movieID=""></div>
+                
+                        </section>
+                        <section>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+
+                        </section>
+                        <section>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            
+                        </section>
+                        <section>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                 
+                        </section>
+                        <section>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                  
+                        </section>
+                        <section>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            
+                        </section>
+                        <section>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                          
+                        </section>
+                    </div>
+                </div>
+                <div class="arrow next">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+            <div class="container-carousel">
+                <div class="arrow prev">
+                    <i class="fas fa-chevron-left"></i>
+                </div>
+                <div class="carousel">
+                    <div class="slider">
+                        <section>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                          
+                        </section>
+                        <section>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                           
+                        </section>
+                        <section>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                        
+                        </section>
+                        <section>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                         
+                        </section>
+                        <section>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            
+                        </section>
+                        <section>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                           
+                        </section>
+                        <section>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                          
+                        </section>
+                    </div>
+                </div>
+                <div class="arrow next">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div class="title-visualization">
+        <div class="title-visualization--centralizer">
+            <div class="section title-preview">
+                <video class="title-prev-video" src="" autoplay></video>
+                <div class="title-section title-basic-information">
+                    <div class="title-basic--content">
+                        <img class="title-name" src="" alt="title-name">
+                        <button class="watch-button"><i class="fas fa-play"></i>Assistir</button>
+                    </div>
+                </div>
+            </div>
+            <div class="title-section title-detailed-information">
+                <div class="title-detailed--section">
+                    <div class="detailed-text">
+                        <p><highlight class="green-highlight" id="title-relevance">97% relevante</highlight></p>
+                        <p id="title-year">2021</p>
+                        <img class="title-parental" src="" alt="parental-advisory">
+                        <p id="title-length">1h 49min</p>
+                    </div>
+           
+                    <br>
+                    <br>
+                    <p id="title-description">Sete anos depois de nao sei oque é isso dai mesmo</p>
+                </div>
+                <div class="title-detailed--section">
+                    <p><highlight class="grey-highlight">Elenco: </highlight>carinha1, carinha2, carinha3, carina4, ver mais</p>
+                    <br>
+                    <p><highlight class="grey-highlight">Generos: </highlight>genero1, genero2, genero3, genero4, ver mais</p>
+                </div>
+            </div>
+            <div class="title-section title-about">
+                <p class="title-about--header"></p>
+                <br>
+                <div class="title-info-inline">
+                    <p class="grey-highlight">Direção: </p>
+                    <p id="title-direction"></p>
+                </div>
+                <br>
+                <div class="title-info-inline">
+                    <p class="grey-highlight">Elenco: </p>
+                    <p id="title-cast">carinha1, carinha2, carinha3, carina4, ver mais</p>
+                </div>
+                <br>
+                <div class="title-info-inline">
+                    <p class="grey-highlight">Roteiro: </p>
+                    <p id="title-script">carinha1, carinha2, carinha3, carina4, ver mais</p>
+                </div>
+                <br>
+                <div class="title-info-inline">
+                    <p class="grey-highlight">Gêneros: </p>
+                    <p id="title-genre">genero1, genero2, genero3, genero4, ver mai</p>
+                </div>
+                <br>
+                <div class="title-info-inline">
+                    <p class="grey-highlight">Classificação etária: </p>
+                    <img class="title-parental" src="">
+                </div>
+            </div>
+        </div>
+       
+    </div>
+
+</body>
+</html>
