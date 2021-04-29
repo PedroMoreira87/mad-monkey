@@ -5,7 +5,7 @@ $(document).ready(function(){
 
         ajaxRequest("password-change-form", "password_change");
         
-        window.location.href = "../../pages/signin_signup/";
+        window.location.href = "../../pages/menu/";
         return false;
     });
 

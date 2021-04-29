@@ -6,7 +6,7 @@
 
     $email = $_POST["email"];
     $subject = "Mudança de senha - Mad Monkey";
-    $link = "localhost/experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/html/password_change/index.html";
+    $link = "localhost/experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/pages/password_change/index.html";
     $content = "<a href='$link'>Clique aqui para alterar sua senha</a>";
 
     sendEmail($email, $subject, $content);
