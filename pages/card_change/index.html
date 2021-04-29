@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,21 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="../../js/biblioteca/jquery-3.6.0.js"></script>
     <script src="../../js/ajax_requests.js"></script>
-    <script src="../../js/card_change/index.js"></script>
+    <script src="../../js/card_change.js"></script>
+    <link rel="stylesheet" href="../../css/card_change.css">
     <title>Troca de Cartão</title>
 </head>
-<body>
-    <head></head>
-    <main>
-        <form id="card-change-form">
-            <input name="card-holder" type="text" placeholder="Titular do Cartão">
-            <input name="card-number" type="text" placeholder="Número do Cartão">
-            <input name="expiration-date" type="text" placeholder="Data de Validade">
-            <input name="security-code" type="text" placeholder="Código de Segurança">
-            
-            <button id="card-change">Confirma</button>
-        </form>
-    </main>
-    <footer></footer>
-</body>
+
+<div class="pagina pagina-login">
+    <div class="cadastrologin-link absolute-centralizer">
+        <div class="cadastrologin-form">
+            <div class="cadastrologin-form-title-div">
+                <p class="cadastrologin-form-title-p">Mude seu Cartão</p>
+            </div>
+            <div class="cadastrologin-form-content">
+                <form class="cadastrologin-form-content-centralizer absolute-centralizer" id="card-change-form">
+                    <input class="cadastrologin-form-input" name="card-holder" type="text" placeholder="Titular do Cartão">
+                    <input class="cadastrologin-form-input" name="card-number" type="text" placeholder="Número do Cartão">
+                    <input class="cadastrologin-form-input" name="expiration-date" type="text" placeholder="Data de Validade">
+                    <input class="cadastrologin-form-input" name="security-code" type="text" placeholder="Código de Segurança">
+                    
+                    <button class="cadastrologin-form-button" id="card-change">Confirma</button>
+                </form>
+            </div>
+        </div>
+        <div class="cadastrologin-link-image">
+            <img src="../../sources/images/logo.png" alt="madmonkeylogo">
+        </div>
+    </div>
+</div>
 </html>

@@ -9,7 +9,7 @@ $(document).ready(function(){
             
             function(status){
                 alert (status)
-                if(status == "true"){
+                if(status == true){
                     checkUserStatus();
                 }
                 else{
