@@ -2,13 +2,12 @@ $(document).ready(function(){
 
     $("#signin-button").click(function(){
 
-        hashPassword();
+        hashPasswordSignin();
 
         // ajaxRequest(name of the form to be serialized, name of your php file)
         $.when(ajaxRequest("signin-form", "signin_request")).then(
             
             function(status){
-                alert (status)
                 if(status == true){
                     checkUserStatus();
                 }
@@ -26,7 +25,7 @@ $(document).ready(function(){
 
 });
 
-function hashPassword(){
+function hashPasswordSignin(){
 
     var sha256 = sjcl.hash.sha256.hash($("#signin-password").val());
     var sha256_hexa = sjcl.codec.hex.fromBits(sha256);
@@ -42,13 +41,13 @@ function checkUserStatus(){
 
             if(status == "active"){
 
-                window.location.href = "/experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/html/main/index.html"
+                window.location.href = "/experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/pages/menu/index.html"
         
             }
         
             if(status == "unactive"){
         
-                window.location.href = "/experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/html/signup_conclusion/index.html"
+                window.location.href = "/experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/pages/signup_conclusion/index.html"
         
             }
 

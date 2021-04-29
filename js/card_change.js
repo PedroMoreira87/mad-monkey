@@ -7,5 +7,6 @@ $(document).ready(function(){
 function card_change(){
     $("#card-change").click(function () {
         ajaxRequest("card-change-form", "card_change")
+        return false;
     });
 }
