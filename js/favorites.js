@@ -5,10 +5,6 @@ $(document).ready(function(){
     var carrossel
     var slider = $(".slider")
 
-    //Load titles
-
-    loadTitles();
-
     //Title information
     $(".titulo-carousel").click(function(){
 
@@ -103,24 +99,6 @@ $(document).ready(function(){
 
 
 })
-
-function loadTitles(){
-
-    $.when(ajaxRequest(null, "load_titles")).then(
-        function(titles){
-
-            for(var i = 0; i < titles.length; i++){
-
-                $(".titulo-carousel").eq(i).attr("movieID", titles[i][0])
-                $(".titulo-carousel").eq(i).css("background-image", 
-                "url('/experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/titles_src/thumbnails/" + titles[i][1] + ".jpg')"); 
-
-            }
-
-        }
-    );
-
-}
 
 function showTitleInformation(titleID){
 
