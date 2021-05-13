@@ -3,8 +3,13 @@
     include("mysql_connection.php");
 
     $titleID = $_POST["titleID"];
+    $titleType = $_POST["titleType"];
     
-    $query =  "SELECT * FROM movies WHERE id = $titleID";
+    if ($titleType != "movies" && $titleType != "series") {
+        exit;
+    }
+
+    $query =  "SELECT * FROM $titleType WHERE id = $titleID";
     $result = mysqli_query($connection, $query);
     $row = mysqli_fetch_assoc($result);
 

@@ -2,8 +2,15 @@
 
     include("mysql_connection.php");
 
-    $query = "SELECT id, name FROM movies";
+    $query = "SELECT 'movies', id, name FROM movies";
     $result = mysqli_query($connection, $query);
-    $row = mysqli_fetch_all($result);
+    $movies = mysqli_fetch_all($result);
+ 
 
-    echo json_encode($row);
+    $query = "SELECT 'series', id, name, season FROM series";
+    $result = mysqli_query($connection, $query);
+    $series = mysqli_fetch_all($result);
+
+    $array = array_merge($movies, $series);
+
+    echo json_encode($array);

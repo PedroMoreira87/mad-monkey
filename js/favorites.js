@@ -10,8 +10,9 @@ $(document).ready(function(){
 
         $(".title-visualization").css("display", "flex");
         $(".title-visualization--centralizer").css("animation", "title-visualization-increase .7s");
-        var titleID = $(this).attr("movieID"); 
-        showTitleInformation(titleID);
+        var titleID = $(this).attr("titleId");
+        var titleType = $(this).attr("titleType");
+        showTitleInformation(titleID, titleType);
     })
 
     $(".title-visualization").click(function(){
@@ -100,7 +101,7 @@ $(document).ready(function(){
 
 })
 
-function showTitleInformation(titleID){
+function showTitleInformation(titleID, titleType){
 
     var video = $(".title-prev-video").get(0);
     video.volume = 1.0
@@ -110,7 +111,8 @@ function showTitleInformation(titleID){
         dataType: "json",
         url: "/experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/php/load_title_information.php",
         data: {
-            "titleID": titleID
+            "titleID": titleID,
+            "titleType": titleType
         }
     });
 

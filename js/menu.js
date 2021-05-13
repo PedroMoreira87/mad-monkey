@@ -13,8 +13,9 @@ $(document).ready(function(){
 
         $(".title-visualization").css("display", "flex");
         $(".title-visualization--centralizer").css("animation", "title-visualization-increase .7s");
-        var titleID = $(this).attr("movieID"); 
-        showTitleInformation(titleID);
+        var titleID = $(this).attr("titleId");
+        var titleType = $(this).attr("titleType");
+        showTitleInformation(titleID, titleType);
     })
 
     $(".title-visualization").click(function(){
@@ -109,19 +110,16 @@ function loadTitles(){
         function(titles){
 
             for(var i = 0; i < titles.length; i++){
-
-                $(".titulo-carousel").eq(i).attr("movieID", titles[i][0])
+                $(".titulo-carousel").eq(i).attr("titleType", titles[i][0])
+                $(".titulo-carousel").eq(i).attr("titleId", titles[i][1])
                 $(".titulo-carousel").eq(i).css("background-image", 
-                "url('/experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/titles_src/thumbnails/" + titles[i][1] + ".jpg')"); 
-
+                "url('/experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/titles_src/thumbnails/" + titles[i][2] + ".jpg')"); 
             }
-
         }
     );
-
 }
 
-function showTitleInformation(titleID){
+function showTitleInformation(titleID, titleType){
 
     var video = $(".title-prev-video").get(0);
     video.volume = 1.0
@@ -131,7 +129,8 @@ function showTitleInformation(titleID){
         dataType: "json",
         url: "/experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/php/load_title_information.php",
         data: {
-            "titleID": titleID
+            "titleID": titleID,
+            "titleType": titleType
         }
     });
 
@@ -147,6 +146,7 @@ function showTitleInformation(titleID){
             $(".title-prev-video").attr("src", "/experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/titles_src/videos/" + titles["name"] + ".mp4")
             $(".title-about--header").text("Sobre: " + titles["name"])
             $("#title-direction").text(titles["director"])
+            $("#add-favorites").attr("movieId", titles["id"])
         }
     );
 

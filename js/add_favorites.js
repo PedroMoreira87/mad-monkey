@@ -8,7 +8,7 @@ function add_favorites() {
             type:"POST",
             dataType: "json",
             url: "/experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/php/add_favorites.php",
-            data: {movieId:1}
+            data: {movieId: $("#add-favorites").attr("titleId")}
         });
     });
 }
