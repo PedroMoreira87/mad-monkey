@@ -8,7 +8,10 @@ function add_favorites() {
             type:"POST",
             dataType: "json",
             url: "/experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/php/add_favorites.php",
-            data: {movieId: $("#add-favorites").attr("titleId")}
+            data: {
+                titleID: $("#add-favorites").attr("titleID"),
+                titleType: $("#add-favorites").attr("titleType")
+            }
         });
     });
 }

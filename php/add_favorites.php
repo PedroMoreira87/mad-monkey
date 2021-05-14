@@ -1,18 +1,26 @@
 <?php
-session_start();
+    session_start();
 
-$userId = $_SESSION["user-id"];
+    $userId = $_SESSION["user-id"];
 
-include("mysql_connection.php");
+    include("mysql_connection.php");
 
-$movieId = $_POST["movieId"];
+    $titleID = $_POST["titleID"];
+    $titleType = $_POST["titleType"];
 
+    $tableName = "users_has_".$titleType;
+    $columnName = $titleType."_id";
 
-$query = "SELECT * FROM users_has_movies WHERE users_idusers = $userId and movies_idmovies = $movieId";
-$result = mysqli_query($connection, $query);
+    if($titleType != "movies" && $titleType != "series"){
+        exit;
+    }
 
-if(mysqli_num_rows($result) > 0){
-    $query =  "DELETE FROM users_has_movies WHERE users_idusers = $userId and movies_idmovies = $movieId";
-}else{
-    $query = "INSERT INTO users_has_movies VALUES ('$userId', '$movieId')";
-}mysqli_query($connection, $query);
+    $query = "SELECT * FROM $tableName WHERE user_id = $userId and $columnName = $titleID";
+    $result = mysqli_query($connection, $query);
+
+    if(mysqli_num_rows($result) > 0){
+        $query =  "DELETE FROM $tableName WHERE user_id = $userId and $columnName = $titleID";
+    }else{
+        $query = "INSERT INTO $tableName VALUES ('$userId', '$titleID')";
+    }mysqli_query($connection, $query);
+

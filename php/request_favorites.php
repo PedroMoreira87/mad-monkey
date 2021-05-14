@@ -8,15 +8,15 @@ include("mysql_connection.php");
 
 $query = "SELECT 'movies', movies.*
                 FROM users_has_movies 
-                INNER JOIN users on users_idusers = users.id
-                INNER JOIN movies on movies_idmovies = movies.id";
+                INNER JOIN users on user_id = users.id
+                INNER JOIN movies on movies_id = movies.id";
 
 $movies = mysqli_fetch_all(mysqli_query($connection, $query));
 
 $query = "SELECT 'series', series.*
             FROM users_has_series 
-            INNER JOIN users on users_idusers = users.id
-            INNER JOIN series on series_idseries = series.id;";
+            INNER JOIN users on user_id = users.id
+            INNER JOIN series on series_id = series.id;";
 
 $series = mysqli_fetch_all(mysqli_query($connection, $query));
 

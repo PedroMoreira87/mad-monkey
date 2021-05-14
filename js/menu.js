@@ -13,30 +13,20 @@ $(document).ready(function(){
 
         $(".title-visualization").css("display", "flex");
         $(".title-visualization--centralizer").css("animation", "title-visualization-increase .7s");
-        var titleID = $(this).attr("titleId");
-        var titleType = $(this).attr("titleType");
+        var titleID = $(this).attr("titleID"); 
+        var titleType = $(this).attr("titleType"); 
         showTitleInformation(titleID, titleType);
     })
 
     $(".title-visualization").click(function(){
 
-        var video = $(".title-prev-video").get(0);
-        
         $(".title-visualization--centralizer").css("animation", "title-visualization-decrease .2s");
         setTimeout(function(){
             $(".title-visualization").css("display", "none");
-            fade()
-        }, 200)
-
-        function fade(){
-            if(video.volume > 0){
-                video.volume -= 0.1;
-                setTimeout(fade, 10);
-            }else{
-                video.pause();
-            }
-        }
+        }, 200);
         
+        $(".title-prev-video").attr("src", "");
+
     })
 
     $(".title-visualization--centralizer").click(function(){
@@ -104,6 +94,7 @@ $(document).ready(function(){
 
 })
 
+
 function loadTitles(){
 
     $.when(ajaxRequest(null, "load_titles")).then(
@@ -134,16 +125,17 @@ function showTitleInformation(titleID, titleType){
     $.when($request).then(
         function(titles){
 
+			$(".title-prev-video").attr("src", "https://www.youtube.com/embed/" + "oZ0CUJK63BU" + "?autoplay=1&controls=0")
             $(".title-name").attr("src", "/experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/titles_src/names/" + titles["name"] + ".png")
             $("#title-relevance").text(titles["relevance"] + "% Relevante")
             $("#title-year").text(titles["year"])
             $(".title-parental").attr("src", "/experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/titles_src/parental_icons/" + titles["parental_rating"] + ".png")
             $("#title-length").text(titles["length"])
             $("#title-description").text(titles["description"])
-            $(".title-prev-video").attr("src", "/experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/titles_src/videos/" + titles["name"] + ".mp4")
             $(".title-about--header").text("Sobre: " + titles["name"])
             $("#title-direction").text(titles["director"])
-            $("#add-favorites").attr("movieId", titles["id"])
+            $("#add-favorites").attr("titleID", titleID)
+            $("#add-favorites").attr("titleType", titleType)
         }
     );
 }
@@ -161,8 +153,8 @@ function fLocalEventosClick() {
         pagina("movies");
         return false;
     });
-    $("#kids").click(function () {
-        pagina("kids");
+    $("#childish").click(function () {
+        pagina("childish");
         return false;
     });
     $("#favorites").click(function () {
@@ -189,8 +181,8 @@ function pagina(pg) {
     else if (pg === "movies") {
         window.location.href = "../../pages/movies/";
     }
-    else if (pg === "kids") {
-        window.location.href = "../../pages/kids/";
+    else if (pg === "childish") {
+        window.location.href = "../../pages/childish/";
     }
     else if (pg === "favorites") {
         window.location.href = "../../pages/favorites/";
