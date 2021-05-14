@@ -148,8 +148,8 @@ function fLocalEventosClick() {
         pagina("movies");
         return false;
     });
-    $("#childish").click(function () {
-        pagina("childish");
+    $("#kids").click(function () {
+        pagina("kids");
         return false;
     });
     $("#favorites").click(function () {
@@ -176,8 +176,8 @@ function pagina(pg) {
     else if (pg === "movies") {
         window.location.href = "../../pages/movies/";
     }
-    else if (pg === "childish") {
-        window.location.href = "../../pages/childish/";
+    else if (pg === "kids") {
+        window.location.href = "../../pages/kids/";
     }
     else if (pg === "favorites") {
         window.location.href = "../../pages/favorites/";

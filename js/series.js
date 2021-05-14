@@ -1,19 +1,10 @@
-$(document).ready(function() {
+$(document).ready(function(){
 
     fLocalEventosClick();
+});
 
-
-})
 
 function fLocalEventosClick() {
-    $("#password-change").click(function () {
-        pagina("password-change");
-        return false;
-    });
-    $("#card-change").click(function () {
-        pagina("card-change");
-        return false;
-    });
     $("#menu").click(function () {
         pagina("menu");
         return false;
@@ -42,20 +33,13 @@ function fLocalEventosClick() {
         pagina("user-config");
         return false;
     });
-    $("#signin-signup").click(function () {
-        pagina("signin-signup");
-        return false;
-    });
 }
 
 function pagina(pg) {
-    if (pg === "password-change") {
-        window.location.href = "../../pages/password_change_menu/";
-    }else if (pg === "card-change") {
-        window.location.href = "../../pages/card_change/";
-    }else if (pg === "menu") {
+    if (pg === "menu") {
         window.location.href = "../../pages/menu/";
-    }else if (pg === "series") {
+    }
+    else if (pg === "series") {
         window.location.href = "../../pages/series/";
     }
     else if (pg === "movies") {
@@ -72,8 +56,5 @@ function pagina(pg) {
     }
     else if (pg === "user-config") {
         window.location.href = "../../pages/user_config/";
-    }
-    else if (pg === "signin-signup") {
-        window.location.href = "../../pages/signin_signup/";
     }
 }

@@ -103,7 +103,7 @@ main {
 
 .main-button{
     display: flex;
-    background-color: #1B2530;
+    background-color: #0F171E;
     align-items: center;
     height: 40px;
     width: 700px;
@@ -111,6 +111,7 @@ main {
     /*padding: 10px 0 10px 15px;*/
     color: #8197A4;
     border: none;
+    border-bottom: 1px solid #8197A4;
 }
 
 .main-button:hover{

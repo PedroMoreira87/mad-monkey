@@ -121,9 +121,6 @@ function loadTitles(){
 
 function showTitleInformation(titleID, titleType){
 
-    var video = $(".title-prev-video").get(0);
-    video.volume = 1.0
-
     $request = $.ajax({
         type:"POST",
         dataType: "json",
@@ -149,9 +146,6 @@ function showTitleInformation(titleID, titleType){
             $("#add-favorites").attr("movieId", titles["id"])
         }
     );
-
-    $(".title-prev-video").get(0).currentTime = 0;
-
 }
 
 function fLocalEventosClick() {
@@ -167,8 +161,8 @@ function fLocalEventosClick() {
         pagina("movies");
         return false;
     });
-    $("#childish").click(function () {
-        pagina("childish");
+    $("#kids").click(function () {
+        pagina("kids");
         return false;
     });
     $("#favorites").click(function () {
@@ -195,8 +189,8 @@ function pagina(pg) {
     else if (pg === "movies") {
         window.location.href = "../../pages/movies/";
     }
-    else if (pg === "childish") {
-        window.location.href = "../../pages/childish/";
+    else if (pg === "kids") {
+        window.location.href = "../../pages/kids/";
     }
     else if (pg === "favorites") {
         window.location.href = "../../pages/favorites/";
