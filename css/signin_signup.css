@@ -52,13 +52,10 @@ body{
 }
 
 .cadastrologin-link{
-
-    width: 650px;
-    height: 450px;
+    width: 34%;
+    height: 46%;
     background-image: linear-gradient(to top right, #3d2828, #14202e);
-
     border-radius: 4px;
-
 }
 
 .cadastrologin-form{
@@ -83,12 +80,9 @@ body{
 }
 
 .cadastrologin-form-title-p{
-
     color: white;
-    font-weight: 500;
-    font-size: 30px;
+    font-size: 1.875rem;
     letter-spacing: 3px;
-
 }
 
 .cadastrologin-form-content{
@@ -126,7 +120,7 @@ body{
 
     margin-top: 50px;
     padding: 10px;
-    width: 130px;
+    width: 45%;
     color: white;
     background-color: teal;
     border-radius: 3px;
@@ -151,25 +145,21 @@ body{
 }
 
 .cadastrologin-link-image img{
-
-    margin-top: 20px;
-    width: 200px;
-
+    margin-top: 5%;
+    width: 60%;
 }
 
 .cadastrologin-link-image-p{
-
     color: white;
     font-size: 20px;
     font-weight: 500;
     margin-top: 20px;
-
 }
 
 .cadastrologin-link-image-button{
 
     margin-top: 30px;
-    width: 100px;
+    width: 30%;
     height: 30px;
     border-radius: 2px;
     letter-spacing: 2px;
@@ -178,9 +168,7 @@ body{
 }
 
 .cadastrologin-link-image-button:hover{
-
     background-color: rgb(228, 222, 222);
-
 }
 
 @keyframes descer{

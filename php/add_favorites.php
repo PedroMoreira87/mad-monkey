@@ -21,6 +21,6 @@
     if(mysqli_num_rows($result) > 0){
         $query =  "DELETE FROM $tableName WHERE user_id = $userId and $columnName = $titleID";
     }else{
-        $query = "INSERT INTO $tableName VALUES ('$userId', '$titleID')";
+        $query = "INSERT INTO $tableName VALUES (NULL, '$userId', '$titleID')";
     }mysqli_query($connection, $query);
 

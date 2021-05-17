@@ -125,7 +125,7 @@ function showTitleInformation(titleID, titleType){
     $.when($request).then(
         function(titles){
 
-			$(".title-prev-video").attr("src", "https://www.youtube.com/embed/" + "oZ0CUJK63BU" + "?autoplay=1&controls=0")
+			$(".title-prev-video").attr("src", "https://www.youtube.com/embed/" + titles["trailer"] + "?autoplay=1&controls=0")
             $(".title-name").attr("src", "/experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/titles_src/names/" + titles["name"] + ".png")
             $("#title-relevance").text(titles["relevance"] + "% Relevante")
             $("#title-year").text(titles["year"])
