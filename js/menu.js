@@ -125,17 +125,39 @@ function showTitleInformation(titleID, titleType){
     $.when($request).then(
         function(titles){
 
-			$(".title-prev-video").attr("src", "https://www.youtube.com/embed/" + titles["trailer"] + "?autoplay=1&controls=0")
-            $(".title-name").attr("src", "/experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/titles_src/names/" + titles["name"] + ".png")
-            $("#title-relevance").text(titles["relevance"] + "% Relevante")
-            $("#title-year").text(titles["year"])
-            $(".title-parental").attr("src", "/experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/titles_src/parental_icons/" + titles["parental_rating"] + ".png")
-            $("#title-length").text(titles["length"])
-            $("#title-description").text(titles["description"])
-            $(".title-about--header").text("Sobre: " + titles["name"])
-            $("#title-direction").text(titles["director"])
+            if(titles[2] == "favored"){
+                $("#add-favorites i").removeClass("fa-plus").addClass("fa-check")
+            }
+
+			$(".title-prev-video").attr("src", "https://www.youtube.com/embed/" + titles[0]["trailer"] + "?autoplay=1&controls=0")
+            $(".title-name").attr("src", "/experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/titles_src/names/" + titles[0]["name"] + ".png")
+            $("#title-relevance").text(titles[0]["relevance"] + "% Relevante")
+            $("#title-year").text(titles[0]["year"])
+            $(".title-parental").attr("src", "/experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/titles_src/parental_icons/" + titles[0]["parental_rating"] + ".png")
+            
+            if(titleType == "movies"){
+                $("#title-length").text(titles[0]["length"])
+            }
+            if(titleType == "series"){
+                $("#title-length").text(titles[0]["season"] + " Temporadas")
+            }
+            
+            $("#title-description").text(titles[0]["description"])
+            $(".title-about--header").text("Sobre: " + titles[0]["name"])
+            $("#title-direction").text(titles[0]["director"])
             $("#add-favorites").attr("titleID", titleID)
             $("#add-favorites").attr("titleType", titleType)
+
+            var cast = ""
+            for(var i = 0; i < titles[1].length; i++){
+
+                cast = cast + titles[1][i];
+
+                if(i != titles[1].length - 1){
+                    cast += ", ";
+                }
+            }
+            $(".title-cast").text(cast)
         }
     );
 }

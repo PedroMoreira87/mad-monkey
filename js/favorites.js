@@ -22,18 +22,9 @@ $(document).ready(function(){
         $(".title-visualization--centralizer").css("animation", "title-visualization-decrease .2s");
         setTimeout(function(){
             $(".title-visualization").css("display", "none");
-            fade()
+   
         }, 200)
 
-        function fade(){
-            if(video.volume > 0){
-                video.volume -= 0.1;
-                setTimeout(fade, 10);
-            }else{
-                video.pause();
-            }
-        }
-        
     })
 
     $(".title-visualization--centralizer").click(function(){
@@ -103,9 +94,6 @@ $(document).ready(function(){
 
 function showTitleInformation(titleID, titleType){
 
-    var video = $(".title-prev-video").get(0);
-    video.volume = 1.0
-
     $request = $.ajax({
         type:"POST",
         dataType: "json",
@@ -119,19 +107,38 @@ function showTitleInformation(titleID, titleType){
     $.when($request).then(
         function(titles){
 
-            $(".title-name").attr("src", "/experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/titles_src/names/" + titles["name"] + ".png")
-            $("#title-relevance").text(titles["relevance"] + "% Relevante")
-            $("#title-year").text(titles["year"])
-            $(".title-parental").attr("src", "/experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/titles_src/parental_icons/" + titles["parental_rating"] + ".png")
-            $("#title-length").text(titles["length"])
-            $("#title-description").text(titles["description"])
-            $(".title-prev-video").attr("src", "/experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/titles_src/videos/" + titles["name"] + ".mp4")
-            $(".title-about--header").text("Sobre: " + titles["name"])
-            $("#title-direction").text(titles["director"])
+			$(".title-prev-video").attr("src", "https://www.youtube.com/embed/" + titles[0]["trailer"] + "?autoplay=1&controls=0")
+            $(".title-name").attr("src", "/experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/titles_src/names/" + titles[0]["name"] + ".png")
+            $("#title-relevance").text(titles[0]["relevance"] + "% Relevante")
+            $("#title-year").text(titles[0]["year"])
+            $(".title-parental").attr("src", "/experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/titles_src/parental_icons/" + titles[0]["parental_rating"] + ".png")
+            
+            if(titleType == "movies"){
+                $("#title-length").text(titles[0]["length"])
+            }
+            if(titleType == "series"){
+                $("#title-length").text(titles[0]["season"] + " Temporadas")
+            }
+            
+            $("#title-description").text(titles[0]["description"])
+            $(".title-about--header").text("Sobre: " + titles[0]["name"])
+            $("#title-direction").text(titles[0]["director"])
+            $("#add-favorites").attr("titleID", titleID)
+            $("#add-favorites").attr("titleType", titleType)
+
+            var cast = ""
+            for(var i = 0; i < titles[1].length; i++){
+
+                cast = cast + titles[1][i];
+
+                if(i != titles[1].length - 1){
+                    cast += ", ";
+                }
+            }
+            $(".title-cast").text(cast)
         }
     );
 
-    $(".title-prev-video").get(0).currentTime = 0;
 
 }
 

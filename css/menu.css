@@ -220,6 +220,12 @@ main {
     
 }
 
+.title-basic--buttons{
+    padding-top: 20px;
+    width: 100%;
+    display: flex;
+}
+
 
 .title-name{
 
@@ -229,7 +235,7 @@ main {
 
 .watch-button{
     
-    margin-top: 25px;
+    margin-right: 10px;
     padding: 10px 0 10px 0;
     color: black;
     background-color: white;
@@ -258,6 +264,29 @@ main {
 
 }
 
+.favorite-button{
+
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.favorite-button:hover{
+
+    background-color: rgba(14, 14, 14, 0.74);
+
+}
+
+.favorite-button i {
+
+    color: white;
+
+}
 
 .title-detailed-information{
     color: white;
@@ -273,6 +302,12 @@ main {
     width: 60%;
     height: 100%;
     padding: 10px 10px 0 40px;
+
+}
+
+.title-detailed--section div *{
+
+    display: inline;
 
 }
 

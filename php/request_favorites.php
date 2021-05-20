@@ -20,6 +20,6 @@ $query = "SELECT 'series', series.*
 
 $series = mysqli_fetch_all(mysqli_query($connection, $query));
 
-$array = array_merge($movies, $series);
+$array = array($movies, $series);
 
 echo json_encode($array);
