@@ -1,81 +1,76 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Configurações do Usuário</title>
-    <script type="text/javascript" src="../../js/biblioteca/jquery-3.6.0.js"></script>
-    <script type="text/javascript" src="../../js/user_config.js"></script>
+<html lang="pt-br">
+<head>
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../../css/user_config.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  </head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <body>
-    <div class="container">
-      <aside>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="../../css/menu.css">
+  <link rel="stylesheet" type="text/css" href="../../css/user_config.css">
+
+  <script type="text/javascript" src="../../js/libraries/jquery_3.6.0.js"></script>
+  <script type="text/javascript" src="../../js/patterns.js"></script>
+
+  <title>Configurações do Usuário</title>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="aside-compact">
+        <i class="fas fa-bars aside-compact-icon"></i>
+    </div>
+    <aside>
+        <i class="fas fa-bars aside-compact-icon"></i>
         <img src="../../img/logo.png" class="aside-logo" alt="" >
-        <button class="aside-button" id="menu">
+        <a href="../menu/" class="aside-button" id="menu">
             <i class="fas fa-home aside-icon"></i>
-            Início
-        </button>
-        <button class="aside-button" id="series">
+            <p>Início</p>
+        </a>
+        <a href="../series" class="aside-button" id="series">
             <i class="fas fa-tv aside-icon"></i>
-            Séries
-        </button>
-        <button class="aside-button" id="movies">
+            <p>Séries</p>
+        </a>
+        <a href="../movies" class="aside-button" id="movies">
             <i class="fas fa-film aside-icon"></i>
-            Filmes
-        </button>
-        <button class="aside-button" id="kids">
-            <i class="fas fa-child aside-icon"></i>
-            Infantil
-        </button>
-        <button class="aside-button" id="favorites">
+            <p>Filmes</p>
+        </a>
+        <a href="../favorites/" class="aside-button" id="favorites">
             <i class="far fa-star aside-icon"></i>
-            Favoritos
-        </button>
-        <button class="aside-button" id="filter">
-            <i class="fas fa-filter aside-icon"></i>
-            Filtro
-        </button>
-        <button class="aside-button1" id="user-config">
-            <i class="far fa-user aside-icon"></i>
-            Usuário
-            <i class="fas fa-cog aside-icon1"></i>
-        </button>
+            <p>Favoritos</p>
+        </a>
+        <a href="../popular/" class="aside-button" id="favorites">
+            <i class="fas fa-award"></i>
+            <p>Bombando</p>
+        </a>
+        <a href="../user_config/" class="aside-button" id="user-config">
+            <i class="far fa-user"></i>
+            <p>Usuário</p>
+            <i class="fas fa-cog"></i>
+        </a>
     </aside>
 
-      <main>
-        <div class="main-text-container">
-          <div>
-            <p class="main-text-title">Configurações</p>
-            <p class="main-text-title">Configurações do app</p>
-            <p class="main-text">Impedir downloads usando dados móveis</p>
-            <p class="main-text">Qualidade do download</p>
-            <p class="main-text-title">Armazenamento</p>
-            <p class="main-text">Espaço usado</p>
-            <p class="main-text">Downloads do Mad Monkey Video</p>
-            <p class="main-text">Espaço livre</p>
-            <p class="main-text">Local de armazenamento</p>
-            <button class="main-button">Alterar local de armazenamento</button>
-          </div>
-
-          <div class="main-text-right">
-            <p class="main-text-title">Configurações da conta</p>
-            <button class="main-button" id="password-change">Trocar senha</button>
-            <button class="main-button" id="card-change">Trocar cartão</button>
-            <button class="main-button">Fale conosco</button>
-            <button class="main-button">Ajuda</button>
-            <button class="main-button" id="signin-signup">Sair da conta</button>
-            <p class="main-text-title">Informações do app</p>
-            <p class="main-text">Versão do aplicativo</p>
-            <p class="main-text">Id do dispositivo</p>
-            <p class="main-text">Nome do dispositivo</p>
-          </div>
+    <main>
+        <div class="main-text-div">
+          <p class="main-text-title">Configurações do app</p>
+          <p class="main-text">Impedir downloads usando dados móveis</p>
+          <p class="main-text">Qualidade do download</p>
+          <p class="main-text-title">Armazenamento</p>
+          <p class="main-text">Espaço usado</p>
+          <p class="main-text">Downloads do Mad Monkey Video</p>
+          <p class="main-text">Espaço livre</p>
+          <p class="main-text">Local de armazenamento</p>
         </div>
-      </main>
-    </div>
-  </body>
+
+        <div class="main-text-div">
+          <p class="main-text-title">Configurações da conta</p>
+          <a href="../password_change/" class="main-button" id="password-change">Trocar senha</a>
+          <a href="../card_change/" class="main-button" id="card-change">Trocar cartão</a>
+          <a href="#" class="main-button">Fale conosco</a>
+          <a href="#" class="main-button">Ajuda</a>
+          <a href="#" class="main-button" id="leave-account">Sair da conta</a>
+        </div>
+    </main>
+  </div>
+</body>
 </html>

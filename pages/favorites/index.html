@@ -1,119 +1,120 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
+    
     <meta charset="UTF-8">
-    <title>Favoritos</title>
-    <script type="text/javascript" src="../../js/biblioteca/jquery-3.6.0.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/menu.css">
+    <link rel="stylesheet" type="text/css" href="../../css/no_big_carousel.css">
+
+    <script type="text/javascript" src="../../js/libraries/jquery_3.6.0.js"></script>
+    <script type="text/javascript" src="../../js/patterns.js"></script>
     <script type="text/javascript" src="../../js/favorites.js"></script>
-    <script type="text/javascript" src="../../js/request_favorites.js"></script>
     <script type="text/javascript" src="../../js/add_favorites.js"></script>
     <script src="../../js/ajax_requests.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="../../css/all.css">
-    <link rel="stylesheet" type="text/css" href="../../css/favorites.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Favoritos</title>
 
 </head>
 
 <body>
     <div class="container">
+        <div class="aside-compact">
+            <i class="fas fa-bars aside-compact-icon"></i>
+        </div>
         <aside>
+            <i class="fas fa-bars aside-compact-icon"></i>
             <img src="../../img/logo.png" class="aside-logo" alt="" >
-            <button class="aside-button" id="menu">
+            <a href="../menu/" class="aside-button" id="menu">
                 <i class="fas fa-home aside-icon"></i>
-                Início
-            </button>
-            <button class="aside-button" id="series">
+                <p>Início</p>
+            </a>
+            <a href="../series" class="aside-button" id="series">
                 <i class="fas fa-tv aside-icon"></i>
-                Séries
-            </button>
-            <button class="aside-button" id="movies">
+                <p>Séries</p>
+            </a>
+            <a href="../movies" class="aside-button" id="movies">
                 <i class="fas fa-film aside-icon"></i>
-                Filmes
-            </button>
-            <button class="aside-button" id="kids">
-                <i class="fas fa-child aside-icon"></i>
-                Infantil
-            </button>
-            <button class="aside-button" id="favorites">
+                <p>Filmes</p>
+            </a>
+            <a href="../favorites/" class="aside-button" id="favorites">
                 <i class="far fa-star aside-icon"></i>
-                Favoritos
-            </button>
-            <button class="aside-button" id="filter">
-                <i class="fas fa-filter aside-icon"></i>
-                Filtro
-            </button>
-            <button class="aside-button1" id="user-config">
-                <i class="far fa-user aside-icon"></i>
-                Usuário
-                <i class="fas fa-cog aside-icon1"></i>
-            </button>
+                <p>Favoritos</p>
+            </a>
+            <a href="../popular/" class="aside-button" id="favorites">
+                <i class="fas fa-award"></i>
+                <p>Bombando</p>
+            </a>
+            <a href="../user_config/" class="aside-button" id="user-config">
+                <i class="far fa-user"></i>
+                <p>Usuário</p>
+                <i class="fas fa-cog"></i>
+            </a>
         </aside>
 
         <main>
-            <h1 class="main-title">Filmes</h1>
-            <div class="container-carousel movies">
+            <p class="carousel-category">Filmes</p>
+            <div class="container-carousel">
                 <div class="arrow prev">
                     <i class="fas fa-chevron-left"></i>
                 </div>
                 <div class="carousel">
                     <div class="slider">
                         <section>
-                            <div class="titulo-carousel" titleId="" titleType=""></div>
-                            <div class="titulo-carousel" titleId="" titleType=""></div>
-                            <div class="titulo-carousel" titleId="" titleType=""></div>
-                            <div class="titulo-carousel" titleId="" titleType=""></div>
-                            <div class="titulo-carousel" titleId="" titleType=""></div>
+                            <div class="titulo-carousel" titleID="" titleType=""></div>
+                            <div class="titulo-carousel" titleID="" titleType=""></div>
+                            <div class="titulo-carousel" titleID="" titleType=""></div>
+                            <div class="titulo-carousel" titleID="" titleType=""></div>
+                            <div class="titulo-carousel" titleID="" titleType=""></div>
                 
                         </section>
                         <section>
-                            <div class="titulo-carousel" titleId="" titleType=""></div>
-                            <div class="titulo-carousel" titleId="" titleType=""></div>
-                            <div class="titulo-carousel" titleId="" titleType=""></div>
-                            <div class="titulo-carousel" titleId="" titleType=""></div>
-                            <div class="titulo-carousel" titleId="" titleType=""></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
 
                         </section>
                         <section>
-                            <div class="titulo-carousel" titleId="" titleType=""></div>
-                            <div class="titulo-carousel" titleId="" titleType=""></div>
-                            <div class="titulo-carousel" titleId="" titleType=""></div>
-                            <div class="titulo-carousel" titleId="" titleType=""></div>
-                            <div class="titulo-carousel" titleId="" titleType=""></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
                             
                         </section>
                         <section>
-                            <div class="titulo-carousel" titleId="" titleType=""></div>
-                            <div class="titulo-carousel" titleId="" titleType=""></div>
-                            <div class="titulo-carousel" titleId="" titleType=""></div>
-                            <div class="titulo-carousel" titleId="" titleType=""></div>
-                            <div class="titulo-carousel" titleId="" titleType=""></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
                  
                         </section>
                         <section>
-                            <div class="titulo-carousel" titleId="" titleType=""></div>
-                            <div class="titulo-carousel" titleId="" titleType=""></div>
-                            <div class="titulo-carousel" titleId="" titleType=""></div>
-                            <div class="titulo-carousel" titleId="" titleType=""></div>
-                            <div class="titulo-carousel" titleId="" titleType=""></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
                   
                         </section>
                         <section>
-                            <div class="titulo-carousel" titleId="" titleType=""></div>
-                            <div class="titulo-carousel" titleId="" titleType=""></div>
-                            <div class="titulo-carousel" titleId="" titleType=""></div>
-                            <div class="titulo-carousel" titleId="" titleType=""></div>
-                            <div class="titulo-carousel" titleId="" titleType=""></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
                             
                         </section>
                         <section>
-                            <div class="titulo-carousel" titleId="" titleType=""></div>
-                            <div class="titulo-carousel" titleId="" titleType=""></div>
-                            <div class="titulo-carousel" titleId="" titleType=""></div>
-                            <div class="titulo-carousel" titleId="" titleType=""></div>
-                            <div class="titulo-carousel" titleId="" titleType=""></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
                           
                         </section>
                     </div>
@@ -122,68 +123,67 @@
                     <i class="fas fa-chevron-right"></i>
                 </div>
             </div>
-            
-            <h1 class="main-title">Séries</h1>
-            <div class="container-carousel series">
+            <p class="carousel-category">Séries</p>
+            <div class="container-carousel">
                 <div class="arrow prev">
                     <i class="fas fa-chevron-left"></i>
                 </div>
                 <div class="carousel">
                     <div class="slider">
                         <section>
-                            <div class="titulo-carousel" titleId="" titleType=""></div>
-                            <div class="titulo-carousel" titleId="" titleType=""></div>
-                            <div class="titulo-carousel" titleId="" titleType=""></div>
-                            <div class="titulo-carousel" titleId="" titleType=""></div>
-                            <div class="titulo-carousel" titleId="" titleType=""></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
                           
                         </section>
                         <section>
-                            <div class="titulo-carousel" titleId="" titleType=""></div>
-                            <div class="titulo-carousel" titleId="" titleType=""></div>
-                            <div class="titulo-carousel" titleId="" titleType=""></div>
-                            <div class="titulo-carousel" titleId="" titleType=""></div>
-                            <div class="titulo-carousel" titleId="" titleType=""></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
                            
                         </section>
                         <section>
-                            <div class="titulo-carousel"  titleId="" titleType=""></div>
-                            <div class="titulo-carousel"  titleId="" titleType=""></div>
-                            <div class="titulo-carousel"  titleId="" titleType=""></div>
-                            <div class="titulo-carousel"  titleId="" titleType=""></div>
-                            <div class="titulo-carousel"  titleId="" titleType=""></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
                         
                         </section>
                         <section>
-                            <div class="titulo-carousel"  titleId="" titleType=""></div>
-                            <div class="titulo-carousel"  titleId="" titleType=""></div>
-                            <div class="titulo-carousel"  titleId="" titleType=""></div>
-                            <div class="titulo-carousel"  titleId="" titleType=""></div>
-                            <div class="titulo-carousel"  titleId="" titleType=""></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
                          
                         </section>
                         <section>
-                            <div class="titulo-carousel"  titleId="" titleType=""></div>
-                            <div class="titulo-carousel"  titleId="" titleType=""></div>
-                            <div class="titulo-carousel"  titleId="" titleType=""></div>
-                            <div class="titulo-carousel"  titleId="" titleType=""></div>
-                            <div class="titulo-carousel"  titleId="" titleType=""></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
                             
                         </section>
                         <section>
-                            <div class="titulo-carousel"  titleId="" titleType=""></div>
-                            <div class="titulo-carousel"  titleId="" titleType=""></div>
-                            <div class="titulo-carousel"  titleId="" titleType=""></div>
-                            <div class="titulo-carousel"  titleId="" titleType=""></div>
-                            <div class="titulo-carousel"  titleId="" titleType=""></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
                            
                         </section>
                         <section>
-                            <div class="titulo-carousel"  titleId="" titleType=""></div>
-                            <div class="titulo-carousel"  titleId="" titleType=""></div>
-                            <div class="titulo-carousel"  titleId="" titleType=""></div>
-                            <div class="titulo-carousel"  titleId="" titleType=""></div>
-                            <div class="titulo-carousel"  titleId="" titleType=""></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
                           
                         </section>
                     </div>

@@ -1,56 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
+    
     <meta charset="UTF-8">
-    <title>Menu</title>
-    <script type="text/javascript" src="../../js/biblioteca/jquery-3.6.0.js"></script>
-    <script type="text/javascript" src="../../js/series.js"></script>
-    <script src="../../js/ajax_requests.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" type="text/css" href="../../css/all.css">
-    <link rel="stylesheet" type="text/css" href="../../css/menu.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/menu.css">
+    <link rel="stylesheet" type="text/css" href="../../css/no_big_carousel">
+
+    <script type="text/javascript" src="../../js/libraries/jquery_3.6.0.js"></script>
+    <script type="text/javascript" src="../../js/patterns.js"></script>
+    <script type="text/javascript" src="../../js/ajax_requests.js"></script>
+    <script type="text/javascript" src="../../js/series.js"></script>
+
+    <title>Séries</title>
 
 </head>
 
 <body>
     <div class="container">
+        <div class="aside-compact">
+            <i class="fas fa-bars aside-compact-icon"></i>
+        </div>
         <aside>
+            <i class="fas fa-bars aside-compact-icon"></i>
             <img src="../../img/logo.png" class="aside-logo" alt="" >
-            <button class="aside-button" id="menu">
+            <a href="../menu/" class="aside-button" id="menu">
                 <i class="fas fa-home aside-icon"></i>
-                Início
-            </button>
-            <button class="aside-button" id="series">
+                <p>Início</p>
+            </a>
+            <a href="../series" class="aside-button" id="series">
                 <i class="fas fa-tv aside-icon"></i>
-                Séries
-            </button>
-            <button class="aside-button" id="movies">
+                <p>Séries</p>
+            </a>
+            <a href="../movies" class="aside-button" id="movies">
                 <i class="fas fa-film aside-icon"></i>
-                Filmes
-            </button>
-            <button class="aside-button" id="kids">
-                <i class="fas fa-child aside-icon"></i>
-                Infantil
-            </button>
-            <button class="aside-button" id="favorites">
+                <p>Filmes</p>
+            </a>
+            <a href="../favorites/" class="aside-button" id="favorites">
                 <i class="far fa-star aside-icon"></i>
-                Favoritos
-            </button>
-            <button class="aside-button" id="filter">
-                <i class="fas fa-filter aside-icon"></i>
-                Filtro
-            </button>
-            <button class="aside-button1" id="user-config">
-                <i class="far fa-user aside-icon"></i>
-                Usuário
-                <i class="fas fa-cog aside-icon1"></i>
-            </button>
+                <p>Favoritos</p>
+            </a>
+            <a href="../popular/" class="aside-button" id="favorites">
+                <i class="fas fa-award"></i>
+                <p>Bombando</p>
+            </a>
+            <a href="../user_config/" class="aside-button" id="user-config">
+                <i class="far fa-user"></i>
+                <p>Usuário</p>
+                <i class="fas fa-cog"></i>
+            </a>
         </aside>
-
         <main>
+            <p class="carousel-category">Comédia</p>
             <div class="container-carousel">
                 <div class="arrow prev">
                     <i class="fas fa-chevron-left"></i>
@@ -58,11 +60,12 @@
                 <div class="carousel">
                     <div class="slider">
                         <section>
-                            <div class="titulo-carousel" titleId="" titleType=""></div>
-                            <div class="titulo-carousel" titleId="" titleType=""></div>
-                            <div class="titulo-carousel" titleId="" titleType=""></div>
-                            <div class="titulo-carousel" titleId="" titleType=""></div>
-                            <div class="titulo-carousel" titleId="" titleType=""></div>
+                            <div class="titulo-carousel" titleID="" titleType=""></div>
+                            <div class="titulo-carousel" titleID="" titleType=""></div>
+                            <div class="titulo-carousel" titleID="" titleType=""></div>
+                            <div class="titulo-carousel" titleID="" titleType=""></div>
+                            <div class="titulo-carousel" titleID="" titleType=""></div>
+                
                         </section>
                         <section>
                             <div class="titulo-carousel"></div>
@@ -118,6 +121,147 @@
                     <i class="fas fa-chevron-right"></i>
                 </div>
             </div>
+            <p class="carousel-category">Ação</p>
+            <div class="container-carousel">
+                <div class="arrow prev">
+                    <i class="fas fa-chevron-left"></i>
+                </div>
+                <div class="carousel">
+                    <div class="slider">
+                        <section>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                          
+                        </section>
+                        <section>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                           
+                        </section>
+                        <section>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                        
+                        </section>
+                        <section>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                         
+                        </section>
+                        <section>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            
+                        </section>
+                        <section>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                           
+                        </section>
+                        <section>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                          
+                        </section>
+                    </div>
+                </div>
+                <div class="arrow next">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+
+            <p class="carousel-category">Drama</p>
+            <div class="container-carousel">
+                <div class="arrow prev">
+                    <i class="fas fa-chevron-left"></i>
+                </div>
+                <div class="carousel">
+                    <div class="slider">
+                        <section>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                          
+                        </section>
+                        <section>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                           
+                        </section>
+                        <section>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                        
+                        </section>
+                        <section>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                         
+                        </section>
+                        <section>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            
+                        </section>
+                        <section>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                           
+                        </section>
+                        <section>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                            <div class="titulo-carousel"></div>
+                          
+                        </section>
+                    </div>
+                </div>
+                <div class="arrow next">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+
+            <p class="carousel-category">Terror</p>
             <div class="container-carousel">
                 <div class="arrow prev">
                     <i class="fas fa-chevron-left"></i>
@@ -192,32 +336,37 @@
     <div class="title-visualization">
         <div class="title-visualization--centralizer">
             <div class="section title-preview">
-                <iframe width="1280" height="720" src="https://www.youtube.com/embed/CxeOOAkXE-M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="overlay"></div>
+                <div class="iframe-div">
+                    <iframe class="title-prev-video" src="" frameborder="0"></iframe>
+                </div>
                 <div class="title-section title-basic-information">
                     <div class="title-basic--content">
                         <img class="title-name" src="" alt="title-name">
-                        <button class="watch-button"><i class="fas fa-play"></i>Assistir</button>
+                        <div class="title-basic--buttons">
+                            <button class="watch-button"><i class="fas fa-play"></i>Assistir</button>
+                            <div class="favorite-button" id="add-favorites" titleID=""><i class="fas fa-plus"></i></div>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="title-section title-detailed-information">
                 <div class="title-detailed--section">
                     <div class="detailed-text">
-                        <p><highlight class="green-highlight" id="title-relevance">97% relevante</highlight></p>
-                        <p id="title-year">2021</p>
+                        <p><highlight class="green-highlight" id="title-relevance"></highlight></p>
+                        <p id="title-year"></p>
                         <img class="title-parental" src="" alt="parental-advisory">
-                        <p id="title-length">1h 49min</p>
+                        <p id="title-length"></p>
                     </div>
            
                     <br>
                     <br>
-                    <p id="title-description">Sete anos depois de nao sei oque é isso dai mesmo</p>
-                    <button class="watch-button"  id="add-favorites" titleId = "">Favoritos</button>
+                    <p id="title-description"></p>
                 </div>
                 <div class="title-detailed--section">
-                    <p><highlight class="grey-highlight">Elenco: </highlight>carinha1, carinha2, carinha3, carina4, ver mais</p>
+                    <div><highlight class="grey-highlight">Elenco: </highlight><p class="title-cast"> </p></div>
                     <br>
-                    <p><highlight class="grey-highlight">Generos: </highlight>genero1, genero2, genero3, genero4, ver mais</p>
+                    <div><highlight class="grey-highlight">Gêneros: </highlight><p class="title-genres"></p></div>
                 </div>
             </div>
             <div class="title-section title-about">
@@ -230,17 +379,17 @@
                 <br>
                 <div class="title-info-inline">
                     <p class="grey-highlight">Elenco: </p>
-                    <p id="title-cast">carinha1, carinha2, carinha3, carina4, ver mais</p>
+                    <p class="title-cast"></p>
                 </div>
                 <br>
                 <div class="title-info-inline">
                     <p class="grey-highlight">Roteiro: </p>
-                    <p id="title-script">carinha1, carinha2, carinha3, carina4, ver mais</p>
+                    <p id="title-script"></p>
                 </div>
                 <br>
                 <div class="title-info-inline">
                     <p class="grey-highlight">Gêneros: </p>
-                    <p id="title-genre">genero1, genero2, genero3, genero4, ver mai</p>
+                    <p class="title-genre"></p>
                 </div>
                 <br>
                 <div class="title-info-inline">
@@ -251,6 +400,5 @@
         </div>
        
     </div>
-
 </body>
 </html>

@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../css/admin_page.css">
 
+    <script type="text/javascript" src="../../js/biblioteca/jquery-3.6.0.js"></script>
+    <script src="../../js/ajax_requests.js"></script>
     <script src="../../js/admin_page.js"></script>
     <title>Mad Monkey - Página de Administração</title>
 </head>
@@ -27,7 +29,7 @@
                 <td class="title-atribute">Classificação indicativa</td>
                 <td class="title-atribute">Duração</td>
                 <td class="title-atribute">Descrição</td>
-                <td class="title-atribute">Diretor</td>    
+                <td class="title-atribute">Diretor</td>
                 <td class="title-atribute">Trailer</td>
             </tr>
             <tr class="titles-separator"></tr>
@@ -53,94 +55,95 @@
 
     <section class="container page" id="add-title">
 
-        <div class="row select-div">
-            <div class="col-6">
-                <label for="title-type-select">Tipo do título:</label>
-                <br>
-                <select class="form-control" id="title-type-select">
-                    <option value="movie" selected>Filme</option>
-                    <option value="series">Série</option>
-                </select>
-            </div>
-        </div>
-
-        <div class="form">
-            <div class="row">
-                <div class="col-sm">
-                    <label for="title-name-input">Nome:</label>
-                    <input type="text" class="form-control" id="title-name-input">
-                </div>
-                <div class="col-sm-2">
-                    <label for="title-year-input">Ano:</label>
-                    <input type="text" class="form-control" id="title-year-input">
-                </div>
-            
-            </div>
-            <div class="select-div">
-                <label for="title-parental-input">Classificação indicativa:</label>
-                <br>
-                <select id="title-parental-input" class="form-control">
-
-                    <option value="all">Livre</option>
-                    <option value="10">10</option>
-                    <option value="12">12</option>
-                    <option value="14">14</option>
-                    <option value="16">16</option>
-                    <option value="18">18</option>
-
-                </select>
-            </div>
-            <div class="row">
-                <div class="col-sm" id="length">
-                    <label for="title-length-input">Duração:</label>
-                    <input type="text" class="form-control" id="title-length-input">
-                </div>
-
-                <div class="col-sm" id="seasons">
-                    <label for="title-seasons-input">Temporadas:</label>
-                    <input type="text" class="form-control" id="title-seasons-input">
-                </div>
-                <div class="col-sm">
-                    <label for="title-director-input">Diretor:</label>
-                    <input type="text" class="form-control" id="title-director-input">
-                </div>
-                <div class="col-sm">
-                    <label for="title-description-input">Descrição:</label>
-                    <textarea type="text" class="form-control" id="title-description-input" maxlength="300"></textarea>
-                </div>
-            </div>
-       
-            <div class="row">
+        <form id="form-admin">
+            <div class="row select-div">
                 <div class="col-6">
-                    <label for="title-trailer-input">Trailer:</label>
-                    <input type="text" class="form-control" id="title-trailer-input">
-                </div>
-
-                <div class="col-sm">
-                    <label for="title-thumbnail-input">Thumbnail:</label>
-                    <input type="file" accept="image/png" class="form-control" id="title-thumbnail-input">
-                </div>
-
-                <div class="col-sm">
-                    <label for="title-header-input">Título: </label>
-                    <input type="file" accept="image/png" class="form-control" id="title-header-input">
+                    <label for="title-type-select">Tipo do título:</label>
+                    <br>
+                    <select class="form-control" id="title-type-select" name="title-type">
+                        <option value="movies" selected>Filme</option>
+                        <option value="series">Série</option>
+                    </select>
                 </div>
             </div>
 
-            <label for="title-cast-input">Elenco: </label>
-            <input type="text" class="form-control" id="title-cast-input">
+            <div class="form">
+                <div class="row">
+                    <div class="col-sm">
+                        <label for="title-name-input">Nome:</label>
+                        <input type="text" class="form-control" id="title-name-input" name="name">
+                    </div>
+                    <div class="col-sm-2">
+                        <label for="title-year-input">Ano:</label>
+                        <input type="text" class="form-control" id="title-year-input" name="year">
+                    </div>
+                
+                </div>
+                <div class="select-div">
+                    <label for="title-parental-input">Classificação indicativa:</label>
+                    <br>
+                    <select id="title-parental-input" class="form-control" name="parental">
 
-            <label for="title-genre-input">Gêneros: </label>
-            <input type="text" class="form-control" id="title-genre-input">
+                        <option value="all">Livre</option>
+                        <option value="10">10</option>
+                        <option value="12">12</option>
+                        <option value="14">14</option>
+                        <option value="16">16</option>
+                        <option value="18">18</option>
 
-            <div class="add-buttons">
+                    </select>
+                </div>
+                <div class="row">
+                    <div class="col-sm" id="length">
+                        <label for="title-length-input">Duração:</label>
+                        <input type="text" class="form-control" id="title-length-input" name="length">
+                    </div>
 
-                <button class="btn btn-success" id="add-title-confirmation">Adicionar título</button>
-                <button class="btn btn-danger" id="back">Voltar</button>
-    
+                    <div class="col-sm" id="seasons">
+                        <label for="title-seasons-input">Temporadas:</label>
+                        <input type="text" class="form-control" id="title-seasons-input" name="season">
+                    </div>
+                    <div class="col-sm">
+                        <label for="title-director-input">Diretor:</label>
+                        <input type="text" class="form-control" id="title-director-input" name="director">
+                    </div>
+                    <div class="col-sm">
+                        <label for="title-description-input">Descrição:</label>
+                        <textarea type="text" class="form-control" id="title-description-input" maxlength="300" name="description"></textarea>
+                    </div>
+                </div>
+        
+                <div class="row">
+                    <div class="col-6">
+                        <label for="title-trailer-input">Trailer:</label>
+                        <input type="text" class="form-control" id="title-trailer-input" name="trailer">
+                    </div>
+
+                    <div class="col-sm">
+                        <label for="title-thumbnail-input">Thumbnail:</label>
+                        <input type="file" accept="image/png" class="form-control" id="title-thumbnail-input" name="thumbnail">
+                    </div>
+
+                    <div class="col-sm">
+                        <label for="title-header-input">Título: </label>
+                        <input type="file" accept="image/png" class="form-control" id="title-header-input" name="title">
+                    </div>
+                </div>
+
+                <label for="title-cast-input">Elenco: </label>
+                <input type="text" class="form-control" id="title-cast-input" name="cast">
+
+                <label for="title-genre-input">Gêneros: </label>
+                <input type="text" class="form-control" id="title-genre-input" name="genre">
+
+                <div class="add-buttons">
+
+                    <button class="btn btn-success" id="add-title-confirmation" type="button">Adicionar título</button>
+                    <button class="btn btn-danger" id="back">Voltar</button>
+        
+                </div>
             </div>
-        </div>
-
+        </form>
     </section>
     
 </body>

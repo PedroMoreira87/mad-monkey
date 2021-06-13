@@ -1,3 +1,6 @@
+var arquivo;
+var formData;
+
 document.addEventListener("DOMContentLoaded", function() {
     
     const viewTitles = document.getElementById("view-titles");
@@ -30,16 +33,26 @@ document.addEventListener("DOMContentLoaded", function() {
             seasons.style.display = "none";
             length.style.display = "block";
         }
-        
-
     })
 
-    
-
     addTitleConfirmation.addEventListener("click", function(){
+        var frm = $('#form-admin');
+        var formData = new FormData(frm[0]);
+        
+            formData.append('file', $('#title-thumbnail-input')[0].files[0]);
+            formData.append('file', $('#title-header-input')[0].files[0]);
 
-        alert("tudo certo")
-
+            $request = $.ajax({
+                url: "../../php/admin_page.php",
+                type:"POST",
+                data: formData,
+                contentType: false,
+                cache: false,
+                processData: false,
+                success: function(retorna) {
+    
+                }
+            });
     });
 
     back.addEventListener("click", function(){
@@ -48,7 +61,4 @@ document.addEventListener("DOMContentLoaded", function() {
         viewTitles.style.display = "block";
 
     });
-
-
-
 });

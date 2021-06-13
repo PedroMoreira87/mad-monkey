@@ -121,23 +121,3 @@ body{
     margin-top: 25%;
     width: 60%;
 }
-
-@keyframes descer{
-    from{
-        top: 0;
-    }
-    to{
-        top: 100%;
-    }
-
-}
-
-@keyframes subir{
-    from{
-        top: 100%;
-    }
-    to{
-        top: 0;
-    }
-
-}
