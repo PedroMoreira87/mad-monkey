@@ -4,7 +4,7 @@ html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif !important;
+    font-family: 'Roboto', sans-serif;
 }
 
 .container{
@@ -43,7 +43,7 @@ main {
     color: white;
     margin-left: 170px;
     margin-top: 20px;
-    font-size:38px;
+    font-size: 1.5rem;
 }
 
 .main-text1 {
@@ -61,7 +61,7 @@ main {
     color: white;
     padding: 20px 70px;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 1.125rem;
     margin-left: 170px;
     margin-top: 30px;
     border-radius: 4px;
