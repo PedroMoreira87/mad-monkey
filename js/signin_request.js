@@ -41,13 +41,13 @@ function checkUserStatus(){
 
             if(status == "active"){
 
-                window.location.href = "/experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/pages/menu/index.html"
+                window.location.href = "/mad-monkey/pages/menu/index.html"
         
             }
         
             if(status == "unactive"){
         
-                window.location.href = "/experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/pages/signup_conclusion/index.html"
+                window.location.href = "/mad-monkey/pages/signup_conclusion/index.html"
         
             }
 

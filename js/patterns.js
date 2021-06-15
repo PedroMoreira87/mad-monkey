@@ -120,7 +120,7 @@ $(document).ready(function(){
         $request = $.ajax({
             type:"POST",
             dataType: "json",
-            url: "/experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/php/load_title_information.php",
+            url: "/mad-monkey/php/load_title_information.php",
             data: {
                 "titleID": titleID,
                 "titleType": titleType
@@ -135,10 +135,10 @@ $(document).ready(function(){
                 }
     
                 $(".title-prev-video").attr("src", "https://www.youtube.com/embed/" + titles[0]["trailer"] + "?autoplay=1&controls=0")
-                $(".title-name").attr("src", "/experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/titles_src/" + titleType + "/" + titleID + "/title.png")
+                $(".title-name").attr("src", "/mad-monkey/titles_src/" + titleType + "/" + titleID + "/title.png")
                 $("#title-relevance").text(titles[0]["relevance"] + "% Relevante")
                 $("#title-year").text(titles[0]["year"])
-                $(".title-parental").attr("src", "/experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/titles_src/parental_icons/" + titles[0]["parental_rating"] + ".png")
+                $(".title-parental").attr("src", "/mad-monkey/titles_src/parental_icons/" + titles[0]["parental_rating"] + ".png")
                 
                 if(titleType == "movies"){
                     $("#title-length").text(titles[0]["length"])

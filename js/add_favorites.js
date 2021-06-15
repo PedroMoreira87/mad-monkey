@@ -9,7 +9,7 @@ function add_favorites() {
         $request = $.ajax({
             type:"POST",
             dataType: "json",
-            url: "/experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/php/add_favorites.php",
+            url: "/mad-monkey/php/add_favorites.php",
             data: {
                 titleID: $("#add-favorites").attr("titleID"),
                 titleType: $("#add-favorites").attr("titleType")

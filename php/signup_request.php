@@ -9,7 +9,7 @@
 
     $subject = "Confirmação de cadastro - Mad Monkey";
     $token = generateConfirmationLink();
-    $confirmationLink = "localhost/experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/php/signup_confirmation.php/"
+    $confirmationLink = "localhost/mad-monkey/php/signup_confirmation.php/"
     .$token;
     $content = "<a href='$confirmationLink'>Clique aqui para confirmar seu cadastro</a>";
 

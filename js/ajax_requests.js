@@ -8,7 +8,7 @@ function ajaxRequest(form, file){
     $request = $.ajax({
         type:"POST",
         dataType: "json",
-        url: "/experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/php/"+ file +".php",
+        url: "/mad-monkey/php/"+ file +".php",
         data: data
     });
 

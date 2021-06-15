@@ -1,5 +1,4 @@
 <?php
-
     include("mysql_connection.php");
 
     $titleType = $_POST["title-type"];
@@ -21,7 +20,7 @@
     if ($titleType == "movies"){
         $query = "INSERT INTO movies VALUES (NULL, '$name', '$relevance', '$year', '$parental','$length', '$description', '$director', '$genre', '$trailer')";
     }else if ($titleType == "series") {
-        $query = "INSERT INTO series VALUES (NULL, '$name', '$relevance', '$year', '$parental', '$description','$director', '$season', ,'$trailer')";
+        $query = "INSERT INTO series VALUES (NULL, '$name', '$relevance', '$year', '$parental', '$description','$director', '$season', '$genre', '$trailer')";
     }else {
         exit;
     }
@@ -30,13 +29,12 @@
 
     $id = mysqli_insert_id($connection);
     mkdir("../titles_src/$titleType/$id");
-    $titleFile = $id;
 
     $image = imagecreatefrompng($_FILES["thumbnail"]["tmp_name"]);
+    imagepng($image, "../titles_src/$titleType/$id/thumbnail.png");
+    
+    $image = imagecreatefrompng($_FILES["title"]["tmp_name"]);
     $black = imagecolorallocate($image, 0, 0, 0);
     imagecolortransparent($image, $black);
-    imagepng($image, "../titles_src/$titleType/$id/thumbnail.png");
-
-    $image = imagecreatefrompng($_FILES["title"]["tmp_name"]);
     imagepng($image, "../titles_src/$titleType/$id/title.png");
     

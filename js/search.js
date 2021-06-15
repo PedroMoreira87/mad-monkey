@@ -12,7 +12,7 @@ $(document).ready(function(){
         $request = $.ajax({
             type:"POST",
             dataType: "json",
-            url: "/experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/php/search.php",
+            url: "/mad-monkey/php/search.php",
             data: {
                 search: search
             }

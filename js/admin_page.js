@@ -3,14 +3,10 @@ var formData;
 
 document.addEventListener("DOMContentLoaded", function() {
     
-    const viewTitles = document.getElementById("view-titles");
-    
-    const addTitleButton = document.getElementById("add-title-button");
     const addTitleConfirmation = document.getElementById("add-title-confirmation");
 
     const titleType = document.getElementById("title-type-select");
 
-    
     titleType.addEventListener("click", function(){
 
         const length = document.getElementById("length");
@@ -30,9 +26,6 @@ document.addEventListener("DOMContentLoaded", function() {
         var frm = $('#form-admin');
         var formData = new FormData(frm[0]);
         
-            formData.append('file', $('#title-thumbnail-input')[0].files[0]);
-            formData.append('file', $('#title-header-input')[0].files[0]);
-
             $request = $.ajax({
                 url: "../../php/admin_page.php",
                 type:"POST",
@@ -44,8 +37,5 @@ document.addEventListener("DOMContentLoaded", function() {
                     alert("Título inserido com sucesso")
                 }
             });
-
-
     });
-
 });

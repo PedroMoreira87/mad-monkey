@@ -8,9 +8,9 @@ $(document).ready(function(){
 
             function(status){
                 if(status){
-                    window.location.href = "/experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/pages/menu/";
+                    window.location.href = "/mad-monkey/pages/menu/";
                 }else{
-                    window.location.href = "/experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/pages/signup_conclusion/";
+                    window.location.href = "/mad-monkey/pages/signup_conclusion/";
                 }
                 
             }

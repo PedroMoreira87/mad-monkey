@@ -28,5 +28,5 @@
     mysqli_free_result($result);
     mysqli_next_result($connection);
     storeSession($connection, $email, $password);
-    header("Location: /experiencia-criativa-implementacao-de-sistemas-de-informacao-tde/pages/signup_conclusion/");
+    header("Location: /mad-monkey/pages/signup_conclusion/");
     exit();
