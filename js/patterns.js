@@ -163,6 +163,7 @@ $(document).ready(function(){
                     }
                 }
                 $(".title-cast").text(cast)
+                $(".title-genre").text(titles[0]["genre"])
             }
         );
     }

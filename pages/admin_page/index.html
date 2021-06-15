@@ -7,51 +7,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../css/admin_page.css">
 
-    <script type="text/javascript" src="../../js/biblioteca/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="../../js/libraries/jquery_3.6.0.js"></script>
     <script src="../../js/ajax_requests.js"></script>
     <script src="../../js/admin_page.js"></script>
     <title>Mad Monkey - Página de Administração</title>
 </head>
 <body>
-
-    <section class="page" id="view-titles">
-        <header class="options">
-            <button class="btn btn-success" id="add-title-button">Adicionar título</button>
-        </header>
-        <table class="titles">
-            <tr class="title-atributes">
-                <td class="title-atribute">Thumbnail</td>
-                <td class="title-atribute">Titulo</td>
-                <td class="title-atribute">ID</td>
-                <td class="title-atribute">Nome</td>
-                <td class="title-atribute">Relevância</td>
-                <td class="title-atribute">Ano</td>
-                <td class="title-atribute">Classificação indicativa</td>
-                <td class="title-atribute">Duração</td>
-                <td class="title-atribute">Descrição</td>
-                <td class="title-atribute">Diretor</td>
-                <td class="title-atribute">Trailer</td>
-            </tr>
-            <tr class="titles-separator"></tr>
-            <tr class="title">
-                <td class="title-img" id="title-thumbnail">
-                    <img src="">
-                </td>
-                <td class="title-img" id="title-header">
-                    <img src="">
-                </td>
-                <td id="title-id"></td>
-                <td id="title-name"></td>
-                <td id="title-relevance"></td>
-                <td id="title-year"></td>
-                <td id="title-parental"></td>
-                <td id="title-length"></td>     
-                <td id="title-description"></td>
-                <td id="title-director"></td>
-                <td id="title-trailer"></td>
-            </tr>
-        </table>
-    </section>
 
     <section class="container page" id="add-title">
 
@@ -84,7 +45,7 @@
                     <br>
                     <select id="title-parental-input" class="form-control" name="parental">
 
-                        <option value="all">Livre</option>
+                        <option value="livre">Livre</option>
                         <option value="10">10</option>
                         <option value="12">12</option>
                         <option value="14">14</option>
@@ -139,7 +100,6 @@
                 <div class="add-buttons">
 
                     <button class="btn btn-success" id="add-title-confirmation" type="button">Adicionar título</button>
-                    <button class="btn btn-danger" id="back">Voltar</button>
         
                 </div>
             </div>

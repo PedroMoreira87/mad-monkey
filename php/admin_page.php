@@ -16,10 +16,12 @@
     $thumbnail = $_FILES["thumbnail"]["name"];
     $title = $_FILES["title"]["name"];
   
+    $relevance = rand(50, 100);
+    
     if ($titleType == "movies"){
-        $query = "INSERT INTO movies VALUES (NULL, '$name', NULL, '$year', '$parental','$length', '$description', '$director',  '$trailer')";
+        $query = "INSERT INTO movies VALUES (NULL, '$name', '$relevance', '$year', '$parental','$length', '$description', '$director', '$genre', '$trailer')";
     }else if ($titleType == "series") {
-        $query = "INSERT INTO series VALUES (NULL, '$name', NULL, '$year', '$parental', '$description','$director', '$season', '$trailer')";
+        $query = "INSERT INTO series VALUES (NULL, '$name', '$relevance', '$year', '$parental', '$description','$director', '$season', ,'$trailer')";
     }else {
         exit;
     }

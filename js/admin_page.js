@@ -4,20 +4,11 @@ var formData;
 document.addEventListener("DOMContentLoaded", function() {
     
     const viewTitles = document.getElementById("view-titles");
-    const addTitle = document.getElementById("add-title");
     
     const addTitleButton = document.getElementById("add-title-button");
     const addTitleConfirmation = document.getElementById("add-title-confirmation");
-    const back = document.getElementById("back");
 
     const titleType = document.getElementById("title-type-select");
-
-    addTitleButton.addEventListener("click", function(){
-
-        viewTitles.style.display = "none";
-        addTitle.style.display = "block";
-
-    });
 
     
     titleType.addEventListener("click", function(){
@@ -49,16 +40,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 contentType: false,
                 cache: false,
                 processData: false,
-                success: function(retorna) {
-    
+                success: function() {
+                    alert("Título inserido com sucesso")
                 }
             });
-    });
 
-    back.addEventListener("click", function(){
-        
-        addTitle.style.display = "none";
-        viewTitles.style.display = "block";
 
     });
+
 });
