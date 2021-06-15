@@ -3,8 +3,9 @@ $(document).ready(function(){
     $("#password-change-button").click(function(){
         hashPassword();
 
-        ajaxRequest("password-change-form", "password_change")
+        ajaxRequest("password-change-form", "password_change");
         
+        window.location.href = "../../pages/menu/";
         return false;
     });
 
