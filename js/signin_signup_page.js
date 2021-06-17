@@ -19,7 +19,7 @@ function mudarPagina(){
         }, 300);
      
         pagina = 1;
-        return;
+        return false;
 
     }
 
@@ -33,7 +33,7 @@ function mudarPagina(){
         }, 300);
 
         pagina = 0;
-        return;
+        return false;
 
     }
 

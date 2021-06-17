@@ -12,6 +12,9 @@
     <script type="text/javascript" src="../../js/patterns.js"></script>
     <script type="text/javascript" src="../../js/ajax_requests.js"></script>
     <script type="text/javascript" src="../../js/series.js"></script>
+    <script type="text/javascript"  src="../../js/search.js"> </script>
+    <script type="text/javascript"  src="../../js/add_favorites.js"> </script>
+    <script type="text/javascript" src="../../js/sections.js"></script>
 
     <title>Séries</title>
 
@@ -22,6 +25,7 @@
         <div class="aside-compact">
             <i class="fas fa-bars aside-compact-icon"></i>
         </div>
+        <input class="search-input" type="text" placeholder="Procure algo: título, gênero, ano">
         <aside>
             <i class="fas fa-bars aside-compact-icon"></i>
             <img src="../../img/logo.png" class="aside-logo" alt="" >
@@ -49,7 +53,7 @@
         </aside>
         <main>
             <p class="carousel-category">Comédia</p>
-            <div class="container-carousel">
+            <div class="container-carousel comédia">
                 <div class="arrow prev">
                     <i class="fas fa-chevron-left"></i>
                 </div>
@@ -118,7 +122,7 @@
                 </div>
             </div>
             <p class="carousel-category">Ação</p>
-            <div class="container-carousel">
+            <div class="container-carousel ação">
                 <div class="arrow prev">
                     <i class="fas fa-chevron-left"></i>
                 </div>
@@ -188,7 +192,7 @@
             </div>
 
             <p class="carousel-category">Drama</p>
-            <div class="container-carousel">
+            <div class="container-carousel drama">
                 <div class="arrow prev">
                     <i class="fas fa-chevron-left"></i>
                 </div>
@@ -258,7 +262,7 @@
             </div>
 
             <p class="carousel-category">Terror</p>
-            <div class="container-carousel">
+            <div class="container-carousel terror">
                 <div class="arrow prev">
                     <i class="fas fa-chevron-left"></i>
                 </div>
@@ -328,7 +332,6 @@
             </div>
         </main>
     </div>
-
     <div class="title-visualization">
         <div class="title-visualization--centralizer">
             <div class="section title-preview">
@@ -360,8 +363,6 @@
                     <p id="title-description"></p>
                 </div>
                 <div class="title-detailed--section">
-                    <div><highlight class="grey-highlight">Elenco: </highlight><p class="title-cast"> </p></div>
-                    <br>
                     <div><highlight class="grey-highlight">Gênero: </highlight><p class="title-genre"></p></div>
                 </div>
             </div>
@@ -371,11 +372,6 @@
                 <div class="title-info-inline">
                     <p class="grey-highlight">Direção: </p>
                     <p id="title-direction"></p>
-                </div>
-                <br>
-                <div class="title-info-inline">
-                    <p class="grey-highlight">Elenco: </p>
-                    <p class="title-cast"></p>
                 </div>
                 <br>
                 <div class="title-info-inline">

@@ -35,11 +35,14 @@ $(document).ready(function(){
 
     $("body").on('click', '.titulo-carousel',function(){
 
-        $(".title-visualization").css("display", "flex");
-        $(".title-visualization--centralizer").css("animation", "title-visualization-increase .7s");
         var titleID = $(this).attr("titleID"); 
         var titleType = $(this).attr("titleType"); 
-        showTitleInformation(titleID, titleType);
+
+        if($.isNumeric(titleID) && (titleType == "series" || titleType == "movies")){
+            $(".title-visualization").css("display", "flex");
+            $(".title-visualization--centralizer").css("animation", "title-visualization-increase .7s");
+            showTitleInformation(titleID, titleType);
+        }
     })
 
     $(".title-visualization").click(function(){
@@ -130,7 +133,7 @@ $(document).ready(function(){
         $.when($request).then(
             function(titles){
     
-                if(titles[2] == "favored"){
+                if(titles[1] == "favored"){
                     $("#add-favorites i").removeClass("fa-plus").addClass("fa-check")
                 }
     
@@ -153,16 +156,6 @@ $(document).ready(function(){
                 $("#add-favorites").attr("titleID", titleID)
                 $("#add-favorites").attr("titleType", titleType)
     
-                var cast = ""
-                for(var i = 0; i < titles[1].length; i++){
-    
-                    cast = cast + titles[1][i];
-    
-                    if(i != titles[1].length - 1){
-                        cast += ", ";
-                    }
-                }
-                $(".title-cast").text(cast)
                 $(".title-genre").text(titles[0]["genre"])
             }
         );

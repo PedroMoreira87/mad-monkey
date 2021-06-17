@@ -3,21 +3,31 @@
 *{
 
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif !important;
     font-weight: 100;
+
+}
+
+body{
+
+    background-color: #1b2530;
 
 }
 
 .content-principal{
     width: 100%;
-    height: 100%;
     background-color: #1b2530;
     padding: 40px;
+    color: white;
+
 }
 
 .content-centralizer{
     height: 100%;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .description{
@@ -44,6 +54,7 @@
 
 .plano-img{
     width: 4rem;
+
     margin: auto;
 }
 

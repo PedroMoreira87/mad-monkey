@@ -22,18 +22,14 @@
     $result = mysqli_query($connection, $query);
     $general = mysqli_fetch_assoc($result);
 
-    $query =  "SELECT name FROM artists INNER JOIN $tableNameCast ON artist_id = artists.id WHERE $columnName = $titleID";
-    $result = mysqli_query($connection, $query);
-    $cast = mysqli_fetch_all($result);
-
     $query =  "SELECT * FROM $tableNameFavorites WHERE $columnName = $titleID AND user_id = $userID";
     $result = mysqli_query($connection, $query);
   
     if(mysqli_num_rows($result) > 0){
-        $informations = array($general, $cast, "favored");
+        $informations = array($general, "favored");
     }
     else{
-        $informations = array($general, $cast, "unfavored");
+        $informations = array($general, "unfavored");
     }
     
     echo json_encode($informations);

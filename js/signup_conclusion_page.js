@@ -41,7 +41,7 @@ function checkUserStatus(){
 
             if(status == "active"){
 
-                window.location.href = "/mad-monkey/html/main/index.html";
+                window.location.href = "/mad-monkey/pages/menu/";
         
             }
 

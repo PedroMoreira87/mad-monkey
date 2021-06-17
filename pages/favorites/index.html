@@ -13,6 +13,7 @@
     <script type="text/javascript" src="../../js/patterns.js"></script>
     <script type="text/javascript" src="../../js/add_favorites.js"></script>
     <script type="text/javascript" src="../../js/request_favorites.js"></script>
+    <script type="text/javascript"  src="../../js/search.js"> </script>
 
     <title>Favoritos</title>
 
@@ -23,6 +24,7 @@
         <div class="aside-compact">
             <i class="fas fa-bars aside-compact-icon"></i>
         </div>
+        <input class="search-input" type="text" placeholder="Procure algo: título, gênero, ano">
         <aside>
             <i class="fas fa-bars aside-compact-icon"></i>
             <img src="../../img/logo.png" class="aside-logo" alt="" >
@@ -221,8 +223,6 @@
                     <p id="title-description"></p>
                 </div>
                 <div class="title-detailed--section">
-                    <div><highlight class="grey-highlight">Elenco: </highlight><p class="title-cast"> </p></div>
-                    <br>
                     <div><highlight class="grey-highlight">Gênero: </highlight><p class="title-genre"></p></div>
                 </div>
             </div>
@@ -232,11 +232,6 @@
                 <div class="title-info-inline">
                     <p class="grey-highlight">Direção: </p>
                     <p id="title-direction"></p>
-                </div>
-                <br>
-                <div class="title-info-inline">
-                    <p class="grey-highlight">Elenco: </p>
-                    <p class="title-cast"></p>
                 </div>
                 <br>
                 <div class="title-info-inline">

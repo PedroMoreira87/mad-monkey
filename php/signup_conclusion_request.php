@@ -5,7 +5,6 @@
 
     $plan = planValidation($_POST['plan']);
     $cpf = cpfValidation($_POST['cpf']);
-    $cnpj =  cnpjValidation($_POST['cnpj']);
     $birthDate = birthDateValidation($_POST['birth-date']);
     $cardHolder = cardHolderValidation($_POST['card-holder']);
     $cardNumber = numberValidation($_POST['card-number'], 19);
@@ -19,7 +18,6 @@
     $query = "UPDATE users SET
     plan = '$plan',
     cpf = '$cpf',
-    cnpj = '$cnpj',
     birth_date = '$birthDate',
     card_holder = '$cardHolder',
     card_number = '$cardNumber',

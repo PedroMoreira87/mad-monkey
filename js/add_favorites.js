@@ -6,7 +6,7 @@ function add_favorites() {
 
     $("#add-favorites").click(function(){
 
-        $request = $.ajax({
+        var request = $.ajax({
             type:"POST",
             dataType: "json",
             url: "/mad-monkey/php/add_favorites.php",
@@ -23,5 +23,13 @@ function add_favorites() {
             $("#add-favorites i").removeClass("fa-plus").addClass("fa-check")
         }
         
+        $.when(request).fail(function(){
+            if(window.location.href == "http://localhost/mad-monkey/pages/favorites/"){
+                window.location.reload();
+            }
+        })
+
     });
+
+
 }
