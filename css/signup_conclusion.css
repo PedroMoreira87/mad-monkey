@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap');
+
+*{
+
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif !important;
+    font-weight: 100;
+
+}
+
+body{
+
+    background-color: #1b2530;
+
+}
+
+.content-principal{
+    width: 100%;
+    background-color: #1b2530;
+    padding: 40px;
+    color: white;
+
+}
+
+.content-centralizer{
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.description{
+
+    color: white;
+    line-height: 1.3;
+
+}
+
+.content-principal2{
+    display: none;
+}
+
+.planos{
+    width: 100%;
+    color: #ffffff;
+    margin-top: 1rem;
+}
+
+.planos td{
+    padding: 20px;
+    text-align: center;
+}
+
+.plano-img{
+    width: 4rem;
+
+    margin: auto;
+}
+
+.plano-quadro{
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.plano-quadro:hover {
+    cursor: pointer;
+}
+
+.planos tr td:first-child{
+    width: 40%;
+    text-align: left;
+}
+
+.planos tr:not(.primeiro, .ultimo) td{
+    border-bottom: 1px solid #ffffff;
+}
+
+.botao{
+    display: block;
+    border: none;
+    background-color: #9c0000;
+    color: white;
+    border-radius: 3px;
+    padding: 15px;
+    width: 45%;
+    margin: 15px auto;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.botao:hover {
+    cursor: pointer;
+    background-color: #ff0000;
+}
+
+.content-centralizer1{
+    width: 65%;
+}
+
+
+
+.bandeiras{
+    margin-bottom: 20px;
+}
+
+.bandeiras p{
+    display: inline-block;
+}
+
+#cnpj{
+    display: none;
+}
+
+input[type="text"]{
+    display: block;
+    width: 100%;
+    padding: 20px 4px 20px 4px;
+    margin-bottom: 20px;
+    border-radius: 2px;
+    border: 1px solid #808080;
+}
+
+.opcoes{
+    margin-bottom: 20px;
+}
+
+.radio:hover {
+    cursor: pointer;
+}
+
+.ver-plano{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #c4c4c4;
+    margin-bottom: 20px;
+}
+
+.text{
+    margin-bottom: 50px;
+}
+
+#botao-assinatura{
+    width: 100%;
+}
+
+.textEnd {
+    text-align: justify;
+}
+.textEnd-1 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
